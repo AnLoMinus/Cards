@@ -1,0 +1,410 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי יוגיהו
+   ======================================== */
+
+.yugioh-card {
+    font-family: 'Matrix', 'Arial Black', sans-serif;
+    width: 350px;
+    height: 510px;
+}
+
+/* רקעי כרטיסים לפי סוג */
+.yugioh-normal {
+    background: linear-gradient(135deg, #f4e7c3 0%, #e0d4a8 50%, #c9b87a 100%);
+}
+
+.yugioh-effect {
+    background: linear-gradient(135deg, #ff9966 0%, #ff8c66 50%, #ff6633 100%);
+}
+
+.yugioh-spell {
+    background: linear-gradient(135deg, #bdf4bd 0%, #7de67d 50%, #4dd34d 100%);
+}
+
+.yugioh-trap {
+    background: linear-gradient(135deg, #ffc4e8 0%, #ff99d9 50%, #ff66cc 100%);
+}
+
+.yugioh-xyz {
+    background: radial-gradient(circle at center, #2a2a2a 0%, #0a0a0a 100%);
+}
+
+.yugioh-ritual {
+    background: linear-gradient(135deg, #7799ff 0%, #5577ee 50%, #3355cc 100%);
+}
+
+.yugioh-fusion {
+    background: linear-gradient(135deg, #bb99ff 0%, #9966ee 50%, #7733cc 100%);
+}
+
+.yugioh-synchro {
+    background: linear-gradient(135deg, #ffffff 0%, #eeeeee 50%, #cccccc 100%);
+}
+
+/* מסגרת יוגיהו */
+.yugioh-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.effect-border {
+    box-shadow: 
+        inset 0 0 15px rgba(255, 100, 0, 0.6),
+        0 0 25px rgba(255, 100, 0, 0.3);
+}
+
+.spell-border {
+    box-shadow: 
+        inset 0 0 15px rgba(0, 255, 100, 0.6),
+        0 0 25px rgba(0, 255, 100, 0.3);
+}
+
+.trap-border {
+    box-shadow: 
+        inset 0 0 15px rgba(255, 100, 200, 0.6),
+        0 0 25px rgba(255, 100, 200, 0.3);
+}
+
+/* תוכן יוגיהו */
+.yugioh-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* כותרת */
+.yugioh-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.yugioh-name {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.5px;
+    flex: 1;
+}
+
+.xyz-name {
+    background: linear-gradient(45deg, #ffd700, #fff, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.9));
+}
+
+/* תכונות */
+.yugioh-attribute {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(200,200,200,0.6));
+    border: 2px solid #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.yugioh-spell-icon,
+.yugioh-trap-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(200,200,200,0.7));
+    border: 2px solid #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.light {
+    background: radial-gradient(circle, #ffeb3b, #fdd835);
+}
+
+.dark {
+    background: radial-gradient(circle, #9c27b0, #7b1fa2);
+}
+
+/* אזור תמונה */
+.yugioh-image-container {
+    position: relative;
+    background: #000;
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 220px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.spell-container,
+.trap-container {
+    height: 260px;
+}
+
+.yugioh-level {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 2px;
+    z-index: 2;
+}
+
+.yugioh-rank {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    gap: 2px;
+    z-index: 2;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 1rem;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.8));
+    animation: starTwinkle 2s ease-in-out infinite;
+}
+
+.rank-star {
+    color: #000;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ffd700, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 1));
+    animation: rankPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes rankPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 3px rgba(255, 215, 0, 1));
+    }
+    50% {
+        filter: drop-shadow(0 0 8px rgba(255, 215, 0, 1));
+    }
+}
+
+.yugioh-artwork {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+/* קופסת מידע */
+.yugioh-info-box {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.xyz-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+    border: 2px solid #ffd700;
+}
+
+.spell-box,
+.trap-box {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.yugioh-type-line {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+    text-align: left;
+    direction: ltr;
+}
+
+.xyz-type {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.xyz-materials {
+    font-size: 0.8rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+    direction: ltr;
+}
+
+.yugioh-description {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #000;
+    text-align: right;
+}
+
+.effect-text,
+.spell-effect,
+.trap-effect,
+.xyz-effect {
+    font-weight: 500;
+}
+
+.xyz-effect {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+/* סטטיסטיקות */
+.yugioh-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.atk, .def {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.xyz-atk, .xyz-def {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+/* תחתית כרטיס */
+.yugioh-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #000;
+    margin-top: auto;
+}
+
+.card-code {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.edition {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.holographic-mark {
+    font-size: 1rem;
+    color: #ffd700;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+}
+
+.xyz-mark {
+    animation: xyzGlow 2s ease-in-out infinite;
+}
+
+@keyframes xyzGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+    }
+}
+
+/* זוהרים מיוחדים */
+.yugioh-glow {
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.4),
+        inset 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.spell-glow {
+    box-shadow: 
+        0 0 25px rgba(0, 255, 100, 0.5),
+        inset 0 0 25px rgba(0, 255, 100, 0.2);
+}
+
+.trap-glow {
+    box-shadow: 
+        0 0 25px rgba(255, 100, 200, 0.5),
+        inset 0 0 25px rgba(255, 100, 200, 0.2);
+}
+
+.xyz-glow {
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(255, 215, 0, 0.6),
+        inset 0 0 30px rgba(255, 215, 0, 0.3);
+    animation: xyzBorderGlow 3s ease-in-out infinite;
+}
+
+@keyframes xyzBorderGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px rgba(0, 0, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.6),
+            inset 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 0 40px rgba(0, 0, 0, 0.9),
+            0 0 60px rgba(255, 215, 0, 0.9),
+            inset 0 0 40px rgba(255, 215, 0, 0.5);
+    }
+}
+
+/* מידע על תבניות יוגיהו */
+.yugioh-info {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 100, 0, 0.1));
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.yugioh-info li {
+    border-right: 4px solid #ff6633;
+}
+
+.yugioh-info li:hover {
+    background: rgba(255, 100, 0, 0.2);
+}
+

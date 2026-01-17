@@ -1,0 +1,590 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי אינויאשה
+   ======================================== */
+
+.inuyasha-card {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    width: 350px;
+    height: 490px;
+}
+
+/* רקעים */
+.inu-red {
+    background: linear-gradient(135deg, #dc143c 0%, #c41e3a 50%, #8b0000 100%);
+}
+
+.inu-purple {
+    background: linear-gradient(135deg, #9370db 0%, #7b68ee 50%, #483d8b 100%);
+}
+
+.inu-spell {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb6c1 50%, #ff69b4 100%);
+}
+
+.inu-jewel {
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #ee82ee 0%, #da70d6 50%, #ba55d3 100%);
+}
+
+/* תבנית פיאודלית */
+.feudal-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* תוכן */
+.inuyasha-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* כותרת */
+.inu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.spirit-cost {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd700, #ffb6c1);
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+}
+
+.spirit-cost.ultra {
+    background: linear-gradient(135deg, #ee82ee, #9370db);
+    animation: spiritPulse 2s ease-in-out infinite;
+}
+
+@keyframes spiritPulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(238, 130, 238, 0.5);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(238, 130, 238, 1);
+    }
+}
+
+.cost-number {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+.inu-name {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+    font-style: italic;
+}
+
+.ultra-name {
+    background: linear-gradient(45deg, #fff, #ffd700, #ee82ee, #9370db);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: ultraShine 4s ease infinite;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.9));
+}
+
+@keyframes ultraShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.character-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.half-demon { border-color: #dc143c; }
+.full-demon { border-color: #9370db; }
+.human { border-color: #87ceeb; }
+
+/* אזור תמונה */
+.character-art {
+    position: relative;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    height: 240px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.ultra-art {
+    border-color: #ee82ee;
+    box-shadow: 0 0 25px rgba(238, 130, 238, 0.7);
+}
+
+.power-level {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.ultra-power {
+    animation: powerGlow 2s ease-in-out infinite;
+}
+
+.power-stat {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 8px 14px;
+    border-radius: 18px;
+    border: 2px solid #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-label {
+    color: #ffd700;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.stat-value {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.character-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    position: relative;
+}
+
+.demon-aura {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        transparent 20%,
+        rgba(238, 130, 238, 0.2) 50%,
+        rgba(147, 112, 219, 0.1) 80%,
+        transparent 100%
+    );
+    animation: auraWave 3s ease-in-out infinite;
+}
+
+@keyframes auraWave {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* מידע */
+.inu-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.character-traits {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.trait-tag {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ability-effect {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    border-right: 4px solid #dc143c;
+}
+
+.ultra-effect {
+    background: linear-gradient(90deg, rgba(238, 130, 238, 0.2), rgba(147, 112, 219, 0.1));
+    border-right-color: #ee82ee;
+}
+
+.spell-effect {
+    border-right-color: #ffd700;
+}
+
+.ability-effect h3 {
+    color: #dc143c;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ultra-effect h3 {
+    color: #ee82ee;
+}
+
+.spell-effect h3 {
+    color: #ffd700;
+}
+
+.ability-effect p {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.ability-effect strong {
+    color: #ffd700;
+}
+
+.jewel-count {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ultra-jewel {
+    background: linear-gradient(90deg, rgba(238, 130, 238, 0.2), rgba(147, 112, 219, 0.2));
+}
+
+.jewel-icon {
+    font-size: 1.2rem;
+}
+
+.jewel-text {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* תחתית */
+.inu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.series-mark,
+.spell-symbol {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.inu-rare {
+    background: linear-gradient(135deg, #fff, #e0e0e0);
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.inu-ultra {
+    background: linear-gradient(135deg, #ee82ee, #9370db);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    animation: ultraGlowBadge 2s ease-in-out infinite;
+}
+
+@keyframes ultraGlowBadge {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(238, 130, 238, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(238, 130, 238, 1);
+    }
+}
+
+/* כישוף */
+.spell-content {
+    padding: 20px 15px;
+}
+
+.spell-art {
+    height: 280px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.spell-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.spell-type {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.type-badge {
+    background: rgba(255, 215, 0, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+.element-badge {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.requirements {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.requirements strong {
+    color: #ffd700;
+}
+
+/* שבר אבן חן */
+.jewel-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.jewel-header {
+    margin-bottom: 15px;
+}
+
+.jewel-title {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    background: linear-gradient(45deg, #ffd700, #ee82ee, #da70d6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
+}
+
+.jewel-art {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.giant-jewel {
+    font-size: 8rem;
+    animation: jewelFloat 3s ease-in-out infinite, jewelGlow 2s ease-in-out infinite;
+}
+
+@keyframes jewelFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes jewelGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 40px rgba(255, 215, 0, 1));
+    }
+}
+
+.jewel-description {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.jewel-description h3 {
+    color: #ffd700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.jewel-description p {
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.jewel-bonus {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.3), rgba(238, 130, 238, 0.3));
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #ffd700;
+}
+
+.bonus-text {
+    color: #ffd700;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.jewel-rare {
+    background: linear-gradient(135deg, #ffd700, #ee82ee);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    animation: jewelBadge 2s ease-in-out infinite;
+}
+
+@keyframes jewelBadge {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+    }
+}
+
+/* זוהרים */
+.inu-glow-red {
+    box-shadow: 
+        0 0 25px rgba(220, 20, 60, 0.6),
+        inset 0 0 25px rgba(139, 0, 0, 0.3);
+}
+
+.inu-glow-ultra {
+    box-shadow: 
+        0 0 35px rgba(238, 130, 238, 0.8),
+        inset 0 0 35px rgba(147, 112, 219, 0.4);
+    animation: ultraGlow 3s ease-in-out infinite;
+}
+
+@keyframes ultraGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 35px rgba(238, 130, 238, 0.8),
+            inset 0 0 35px rgba(147, 112, 219, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(238, 130, 238, 1),
+            inset 0 0 50px rgba(147, 112, 219, 0.6);
+    }
+}
+
+.spell-glow {
+    box-shadow: 
+        0 0 25px rgba(255, 215, 0, 0.6),
+        inset 0 0 25px rgba(255, 182, 193, 0.3);
+}
+
+.jewel-glow {
+    box-shadow: 
+        0 0 30px rgba(255, 215, 0, 0.7),
+        0 0 40px rgba(238, 130, 238, 0.5),
+        inset 0 0 30px rgba(218, 112, 214, 0.4);
+    animation: jewelOuterGlow 3s ease-in-out infinite;
+}
+
+@keyframes jewelOuterGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 30px rgba(255, 215, 0, 0.7),
+            0 0 40px rgba(238, 130, 238, 0.5),
+            inset 0 0 30px rgba(218, 112, 214, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(255, 215, 0, 1),
+            0 0 60px rgba(238, 130, 238, 0.8),
+            inset 0 0 40px rgba(218, 112, 214, 0.6);
+    }
+}
+
+/* מידע */
+.inuyasha-info {
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), rgba(147, 112, 219, 0.1));
+    border: 2px solid rgba(220, 20, 60, 0.4);
+}
+
+.inuyasha-info li {
+    border-right: 4px solid #c41e3a;
+}
+
+.inuyasha-info li:hover {
+    background: rgba(220, 20, 60, 0.2);
+}
+

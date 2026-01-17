@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תבנית כרטיסי אינויאשה</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="inuyasha-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🗡️ תבנית כרטיסי אינויאשה (Inuyasha)</h1>
+
+        <div class="template-info inuyasha-info">
+            <h2>סוגי כרטיסים</h2>
+            <ul>
+                <li><strong>Character Card</strong> - כרטיס דמות</li>
+                <li><strong>Demon Card</strong> - כרטיס שד</li>
+                <li><strong>Spell Card</strong> - כרטיס כישוף</li>
+                <li><strong>Item Card</strong> - כרטיס פריט</li>
+                <li><strong>Jewel Shard</strong> - שבר אבן החן</li>
+                <li><strong>Ultra Rare</strong> - נדיר במיוחד</li>
+            </ul>
+        </div>
+
+        <div class="cards-grid">
+            <!-- כרטיס דמות -->
+            <div class="card-wrapper">
+                <div class="card inuyasha-card" data-card-type="character">
+                    <div class="card-inner">
+                        <div class="card-background inu-red"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="feudal-pattern"></div>
+
+                        <div class="card-content inuyasha-content">
+                            <div class="inu-header">
+                                <div class="spirit-cost">
+                                    <span class="cost-number">4</span>
+                                </div>
+                                <h2 class="inu-name">Inuyasha</h2>
+                                <div class="character-type half-demon">
+                                    <span>Half-Demon</span>
+                                </div>
+                            </div>
+
+                            <div class="character-art">
+                                <div class="power-level">
+                                    <div class="power-stat">
+                                        <span class="stat-label">Power:</span>
+                                        <span class="stat-value">2500</span>
+                                    </div>
+                                </div>
+                                <div class="character-image">
+                                    <p class="placeholder-text">תמונת הדמות</p>
+                                </div>
+                            </div>
+
+                            <div class="inu-info">
+                                <div class="character-traits">
+                                    <span class="trait-tag demon">🔴 Demon</span>
+                                    <span class="trait-tag sword">⚔️ Sword Master</span>
+                                </div>
+
+                                <div class="ability-effect">
+                                    <h3><span class="ability-icon">⚡</span> Wind Scar</h3>
+                                    <p><strong>[Active]</strong> השמד עד 3 שדים של היריב עם Power 1500 או פחות.</p>
+                                    <p><strong>[Passive]</strong> כאשר דמות זו תוקפת שד, היא מקבלת +1000 Power.</p>
+                                </div>
+
+                                <div class="jewel-count">
+                                    <span class="jewel-icon">💎</span>
+                                    <span class="jewel-text">Jewel Shards: 0/4</span>
+                                </div>
+                            </div>
+
+                            <div class="inu-footer">
+                                <div class="card-number">INU-001</div>
+                                <div class="series-mark">犬</div>
+                                <div class="rarity inu-rare">R</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow inu-glow-red"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Ultra Rare -->
+            <div class="card-wrapper">
+                <div class="card inuyasha-card" data-card-type="character" data-rarity="ultra">
+                    <div class="card-inner">
+                        <div class="card-background inu-purple"></div>
+                        <div class="rainbow-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content inuyasha-content">
+                            <div class="inu-header">
+                                <div class="spirit-cost ultra">
+                                    <span class="cost-number">7</span>
+                                </div>
+                                <h2 class="inu-name ultra-name">Sesshomaru</h2>
+                                <div class="character-type full-demon">
+                                    <span>Full Demon</span>
+                                </div>
+                            </div>
+
+                            <div class="character-art ultra-art">
+                                <div class="power-level ultra-power">
+                                    <div class="power-stat">
+                                        <span class="stat-label">Power:</span>
+                                        <span class="stat-value">4000</span>
+                                    </div>
+                                </div>
+                                <div class="character-image">
+                                    <div class="demon-aura"></div>
+                                    <p class="placeholder-text">תמונת הדמות</p>
+                                </div>
+                            </div>
+
+                            <div class="inu-info">
+                                <div class="character-traits">
+                                    <span class="trait-tag demon">🔴 Pure Demon</span>
+                                    <span class="trait-tag legendary">👑 Legendary</span>
+                                </div>
+
+                                <div class="ability-effect ultra-effect">
+                                    <h3><span class="ability-icon">💫</span> Tenseiga</h3>
+                                    <p><strong>[Divine Blade]</strong> פעם במשחק, החזר לחיים דמות אחת מבית הקברות.</p>
+                                    <p><strong>[Immunity]</strong> דמות זו לא יכולה להיהרס על ידי שדים.</p>
+                                    <p><strong>[Lord of the West]</strong> כל השדים שלך מקבלים +500 Power.</p>
+                                </div>
+
+                                <div class="jewel-count ultra-jewel">
+                                    <span class="jewel-icon">💎</span>
+                                    <span class="jewel-text">Jewel Shards: N/A</span>
+                                </div>
+                            </div>
+
+                            <div class="inu-footer">
+                                <div class="card-number">INU-025</div>
+                                <div class="series-mark">殺</div>
+                                <div class="rarity inu-ultra">UR</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow inu-glow-ultra"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס כישוף -->
+            <div class="card-wrapper">
+                <div class="card inuyasha-card" data-card-type="spell">
+                    <div class="card-inner">
+                        <div class="card-background inu-spell"></div>
+                        <div class="holographic-layer"></div>
+
+                        <div class="card-content inuyasha-content spell-content">
+                            <div class="inu-header spell-header">
+                                <div class="spirit-cost">
+                                    <span class="cost-number">3</span>
+                                </div>
+                                <h2 class="inu-name spell-name">Sacred Arrow</h2>
+                            </div>
+
+                            <div class="spell-art">
+                                <div class="spell-image">
+                                    <p class="placeholder-text">תמונת הכישוף</p>
+                                </div>
+                            </div>
+
+                            <div class="inu-info spell-info">
+                                <div class="spell-type">
+                                    <span class="type-badge">Purification</span>
+                                    <span class="element-badge holy">✨ Holy</span>
+                                </div>
+
+                                <div class="ability-effect spell-effect">
+                                    <h3>אפקט הכישוף</h3>
+                                    <p><strong>Target:</strong> 1 שד של היריב</p>
+                                    <p><strong>Effect:</strong> טהר שד אחד והשמד אותו. שלוף קלף אחד.</p>
+                                </div>
+
+                                <div class="requirements">
+                                    <strong>Requirements:</strong> Kagome Higurashi
+                                </div>
+                            </div>
+
+                            <div class="inu-footer">
+                                <div class="card-number">INU-S12</div>
+                                <div class="spell-symbol">🏹</div>
+                                <div class="rarity inu-rare">U</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow spell-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס שבר אבן החן -->
+            <div class="card-wrapper">
+                <div class="card inuyasha-card jewel-card" data-card-type="jewel">
+                    <div class="card-inner">
+                        <div class="card-background inu-jewel"></div>
+                        <div class="crystal-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content inuyasha-content jewel-content">
+                            <div class="jewel-header">
+                                <h2 class="jewel-title">Shikon Jewel Shard</h2>
+                            </div>
+
+                            <div class="jewel-art">
+                                <div class="giant-jewel">💎</div>
+                            </div>
+
+                            <div class="inu-info jewel-info">
+                                <div class="jewel-description">
+                                    <h3>שבר אבן החן המקודשת</h3>
+                                    <p>צרף לדמות כדי להגביר את כוחה. כל שבר מוסיף +500 Power.</p>
+                                    <p><strong>מיוחד:</strong> אם דמות אוספת 4 שברים, היא מקבלת +2000 Power נוסף.</p>
+                                </div>
+
+                                <div class="jewel-bonus">
+                                    <span class="bonus-text">Power Bonus: +500</span>
+                                </div>
+                            </div>
+
+                            <div class="inu-footer">
+                                <div class="card-number">INU-J01</div>
+                                <div class="series-mark">玉</div>
+                                <div class="rarity jewel-rare">SR</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow jewel-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization-guide">
+            <h2>🎨 מדריך עיצוב כרטיסי אינויאשה</h2>
+            <div class="guide-sections">
+                <div class="guide-section">
+                    <h3>סוגי דמויות</h3>
+                    <p>סוגים זמינים:</p>
+                    <pre>half-demon - חצי שד
+full-demon - שד מלא
+human - אנושי
+spirit - רוח</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>סוגי כרטיסים</h3>
+                    <p>שנה את <code>data-card-type</code>:</p>
+                    <pre>character - דמות
+demon - שד
+spell - כישוף
+item - פריט
+jewel - שבר אבן חן</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>רמות נדירות</h3>
+                    <p>רמות:</p>
+                    <pre>C - Common
+U - Uncommon
+R - Rare
+SR - Super Rare
+UR - Ultra Rare
+SEC - Secret</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>תכונות</h3>
+                    <p>תכונות זמינות:</p>
+                    <pre>🔴 Demon - שד
+⚔️ Sword Master - מאסטר חרב
+✨ Holy - קדוש
+🏹 Archer - קשת
+👑 Legendary - אגדי</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- תפריט שכבות צף -->
+    <div class="layers-menu" id="layersMenu">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="toggle-icon">⚙️</span>
+            <span class="toggle-text">שכבות</span>
+        </div>
+
+        <div class="menu-content" id="menuContent">
+            <div class="menu-header">
+                <h3>🎨 בקרת שכבות</h3>
+                <button class="close-btn" id="closeMenu">✕</button>
+            </div>
+
+            <div class="menu-body">
+                <div class="layer-group">
+                    <h4>שכבות בסיסיות</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-background" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎨 רקע (Background)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-holographic" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">✨ הולוגרפיה (Holographic)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-crystal" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💎 קריסטל (Crystal)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-rainbow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌈 קשת (Rainbow)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>אפקטים</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-sparkles" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">⭐ ניצוצות (Sparkles)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-border-glow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💫 זוהר מסגרת (Border Glow)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-3d" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎭 אפקט 3D (3D Effect)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>תוכן</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-content" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">📝 תוכן כרטיס (Content)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-text-shadow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌑 צללי טקסט (Text Shadows)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>פעולות מהירות</h4>
+
+                    <div class="quick-actions">
+                        <button class="action-btn" id="enableAll">
+                            ✅ הפעל הכל
+                        </button>
+                        <button class="action-btn" id="disableAll">
+                            ❌ כבה הכל
+                        </button>
+                        <button class="action-btn" id="resetLayers">
+                            🔄 איפוס
+                        </button>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>מצבי תצוגה</h4>
+
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="full">
+                            🌟 מלא
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            📄 מינימלי
+                        </button>
+                        <button class="preset-btn" data-preset="effects-only">
+                            ✨ אפקטים בלבד
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="inuyasha-script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,623 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי דרגון בול
+   ======================================== */
+
+.db-card {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    width: 350px;
+    height: 490px;
+}
+
+/* רקעים */
+.db-orange {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8800 50%, #f77f00 100%);
+}
+
+.db-blue {
+    background: linear-gradient(135deg, #4895ef 0%, #4361ee 50%, #3f37c9 100%);
+}
+
+.db-energy {
+    background: linear-gradient(135deg, #90e0ef 0%, #00b4d8 50%, #0077b6 100%);
+}
+
+.db-leader {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(67, 97, 238, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* אאורה של אנרגיה */
+.energy-aura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.orange-aura {
+    background: radial-gradient(circle at center, 
+        transparent 30%,
+        rgba(255, 107, 53, 0.3) 50%,
+        rgba(255, 136, 0, 0.2) 70%,
+        transparent 90%
+    );
+    animation: auraP pulse 3s ease-in-out infinite;
+}
+
+.blue-aura {
+    background: radial-gradient(circle at center,
+        transparent 30%,
+        rgba(72, 149, 239, 0.4) 50%,
+        rgba(67, 97, 238, 0.3) 70%,
+        transparent 90%
+    );
+    animation: auraPulse 3s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+}
+
+/* תוכן כרטיס */
+.db-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* כותרת */
+.db-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.db-cost {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd60a 0%, #ffc300 100%);
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.db-cost.ultra {
+    background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
+    animation: costGlow 2s ease-in-out infinite;
+}
+
+@keyframes costGlow {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(255, 0, 110, 0.5);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(255, 0, 110, 0.9);
+    }
+}
+
+.cost-number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.db-name {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ultra-name {
+    background: linear-gradient(45deg, #ffd60a, #fff, #4cc9f0, #f72585);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: ultraShine 4s ease infinite;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
+}
+
+@keyframes ultraShine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.db-color {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* אזור תמונת דמות */
+.db-character-art {
+    position: relative;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    height: 240px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.power-level {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #ffd60a;
+    z-index: 2;
+}
+
+.power-level.ultra {
+    border: 2px solid #ff006e;
+    animation: powerPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes powerPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 0, 110, 1);
+    }
+}
+
+.power-label {
+    color: #ffd60a;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.power-value {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.character-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+/* מידע כרטיס */
+.db-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.character-title {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ultra-title {
+    background: linear-gradient(90deg, rgba(255, 214, 10, 0.2), rgba(76, 201, 240, 0.2));
+    border: 1px solid rgba(255, 214, 10, 0.5);
+}
+
+.title-text {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* יכולות */
+.db-abilities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ability {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    border-right: 4px solid #ffd60a;
+}
+
+.ability.special {
+    border-right-color: #ff006e;
+    background: rgba(255, 0, 110, 0.15);
+}
+
+.ultra-ability {
+    background: linear-gradient(90deg, rgba(255, 214, 10, 0.15), rgba(76, 201, 240, 0.15));
+    border-right-color: #4cc9f0;
+}
+
+.ability h3 {
+    color: #ffd60a;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ability.ultra-ability h3 {
+    color: #4cc9f0;
+}
+
+.ability-icon {
+    font-size: 1.1rem;
+}
+
+.ability p {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ability strong {
+    color: #ffd60a;
+}
+
+/* Combo */
+.db-combo {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.db-combo.ultra {
+    background: linear-gradient(90deg, rgba(255, 0, 110, 0.2), rgba(131, 56, 236, 0.2));
+}
+
+.combo-label {
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.combo-value {
+    color: #ffd60a;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+/* תחתית */
+.db-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-number {
+    color: #fff;
+    font-size: 0.75rem;
+    font-family: monospace;
+}
+
+.series-icon {
+    color: #ffd60a;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.rarity-symbol {
+    background: linear-gradient(135deg, #ffd60a, #ffc300);
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.ultra-rare {
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    color: #fff;
+    animation: rarityGlow 2s ease-in-out infinite;
+}
+
+.secret-rare {
+    background: linear-gradient(135deg, #ffd60a, #4cc9f0, #ff006e);
+    background-size: 200% 200%;
+    color: #fff;
+    animation: secretShine 3s ease infinite;
+}
+
+@keyframes rarityGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 110, 1);
+    }
+}
+
+@keyframes secretShine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* כרטיסי Battle */
+.battle-content {
+    padding: 20px 15px;
+}
+
+.battle-art {
+    height: 280px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.battle-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+}
+
+.battle-type {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.battle-type span {
+    color: #4cc9f0;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.battle-effect {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.battle-effect p {
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.battle-effect strong {
+    color: #ffd60a;
+}
+
+/* כרטיסי Leader */
+.leader-card {
+    height: 510px;
+}
+
+.leader-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ff006e, #8338ec);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 1rem;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.5);
+    animation: leaderPulse 2s ease-in-out infinite;
+}
+
+@keyframes leaderPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(255, 0, 110, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(255, 0, 110, 0.8);
+    }
+}
+
+.leader-name {
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, #ffd60a, #ff006e, #4cc9f0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: leaderShine 4s ease infinite;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.9));
+}
+
+@keyframes leaderShine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.leader-art {
+    position: relative;
+    height: 260px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.leader-power {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 3px solid #ff006e;
+    z-index: 2;
+}
+
+.leader-power .power-value {
+    color: #ff006e;
+    font-size: 1.5rem;
+}
+
+.leader-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #2a2a2a, #0a0a0a);
+}
+
+.leader-side {
+    background: linear-gradient(90deg, #ff006e, #8338ec);
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.leader-ability {
+    border-right-color: #ff006e;
+    background: rgba(255, 0, 110, 0.15);
+}
+
+.leader-ability h3 {
+    color: #ff006e;
+}
+
+/* זוהרים */
+.db-glow-orange {
+    box-shadow: 
+        0 0 30px rgba(255, 107, 53, 0.6),
+        inset 0 0 30px rgba(255, 136, 0, 0.3);
+}
+
+.db-glow-blue {
+    box-shadow: 
+        0 0 35px rgba(72, 149, 239, 0.7),
+        inset 0 0 35px rgba(67, 97, 238, 0.4);
+    animation: blueGlow 3s ease-in-out infinite;
+}
+
+@keyframes blueGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 35px rgba(72, 149, 239, 0.7),
+            inset 0 0 35px rgba(67, 97, 238, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(72, 149, 239, 1),
+            inset 0 0 50px rgba(67, 97, 238, 0.6);
+    }
+}
+
+.db-glow-green {
+    box-shadow: 
+        0 0 30px rgba(0, 180, 216, 0.6),
+        inset 0 0 30px rgba(0, 119, 182, 0.3);
+}
+
+.db-glow-leader {
+    box-shadow: 
+        0 0 40px rgba(255, 0, 110, 0.7),
+        0 0 50px rgba(131, 56, 236, 0.5),
+        inset 0 0 40px rgba(255, 0, 110, 0.3);
+    animation: leaderGlow 3s ease-in-out infinite;
+}
+
+@keyframes leaderGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 40px rgba(255, 0, 110, 0.7),
+            0 0 50px rgba(131, 56, 236, 0.5),
+            inset 0 0 40px rgba(255, 0, 110, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 0 60px rgba(255, 0, 110, 1),
+            0 0 70px rgba(131, 56, 236, 0.8),
+            inset 0 0 50px rgba(255, 0, 110, 0.5);
+    }
+}
+
+/* מידע על תבניות */
+.db-info {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(72, 149, 239, 0.1));
+    border: 2px solid rgba(255, 107, 53, 0.4);
+}
+
+.db-info li {
+    border-right: 4px solid #ff8800;
+}
+
+.db-info li:hover {
+    background: rgba(255, 107, 53, 0.2);
+}
+

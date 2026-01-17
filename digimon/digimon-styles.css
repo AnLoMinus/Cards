@@ -1,0 +1,500 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי דיגימון
+   ======================================== */
+
+.digimon-card {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+    width: 350px;
+    height: 490px;
+}
+
+/* רקעים לפי רמה */
+.digimon-rookie {
+    background: linear-gradient(135deg, #fee440 0%, #f9c74f 50%, #f8961e 100%);
+}
+
+.digimon-champion {
+    background: linear-gradient(135deg, #90ee90 0%, #52b788 50%, #2d6a4f 100%);
+}
+
+.digimon-ultimate {
+    background: linear-gradient(135deg, #56cfe1 0%, #4ea8de 50%, #4895ef 100%);
+}
+
+.digimon-mega {
+    background: linear-gradient(135deg, #b185db 0%, #9d4edd 50%, #7209b7 100%);
+}
+
+.digimon-option {
+    background: linear-gradient(135deg, #ff6b9d 0%, #f72585 50%, #c9184a 100%);
+}
+
+.digimon-tamer {
+    background: linear-gradient(135deg, #ffd6a5 0%, #ffb700 50%, #ff9500 100%);
+}
+
+/* תבנית דיגימון */
+.digimon-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, 
+            transparent,
+            transparent 15px,
+            rgba(255,255,255,0.05) 15px,
+            rgba(255,255,255,0.05) 30px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* תוכן */
+.digimon-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* כותרת */
+.digimon-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.digimon-level {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    border: 3px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.rookie-level {
+    border-color: #f9c74f;
+}
+
+.mega-level {
+    background: linear-gradient(135deg, #ffd700, #ff6b9d);
+    border-color: #7209b7;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: levelPulse 2s ease-in-out infinite;
+}
+
+@keyframes levelPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(114, 9, 183, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(114, 9, 183, 0.9);
+    }
+}
+
+.digimon-name {
+    flex: 1;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+    text-transform: uppercase;
+}
+
+.mega-name {
+    background: linear-gradient(45deg, #ffd700, #fff, #b185db);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: megaShine 3s ease infinite;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
+}
+
+@keyframes megaShine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.digimon-cost {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b9d, #f72585);
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.mega-cost {
+    background: linear-gradient(135deg, #9d4edd, #7209b7);
+    animation: costGlow 2s ease-in-out infinite;
+}
+
+.cost-value {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* אזור תמונה */
+.digimon-art {
+    position: relative;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    height: 230px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.mega-art {
+    border-color: #9d4edd;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+}
+
+.dp-value {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+.mega-dp {
+    border-color: #ff6b9d;
+    animation: dpPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes dpPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 107, 157, 1);
+    }
+}
+
+.dp-label {
+    color: #ffd700;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.dp-number {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.digimon-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+/* מידע */
+.digimon-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.digimon-type {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.mega-type {
+    animation: typeGlow 3s ease-in-out infinite;
+}
+
+.type-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.rookie-badge {
+    background: linear-gradient(90deg, rgba(249, 199, 79, 0.3), rgba(248, 150, 30, 0.3));
+    border-color: #f9c74f;
+}
+
+.mega-badge {
+    background: linear-gradient(90deg, rgba(181, 133, 219, 0.4), rgba(157, 78, 221, 0.4));
+    border-color: #9d4edd;
+}
+
+.option-badge {
+    background: linear-gradient(90deg, rgba(255, 107, 157, 0.3), rgba(247, 37, 133, 0.3));
+    border-color: #f72585;
+}
+
+.tamer-badge {
+    background: linear-gradient(90deg, rgba(255, 183, 0, 0.3), rgba(255, 149, 0, 0.3));
+    border-color: #ffb700;
+}
+
+.attribute-badge {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* אפקטים */
+.digimon-effect {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    border-right: 4px solid #ffd700;
+}
+
+.mega-effect {
+    background: linear-gradient(90deg, rgba(181, 133, 219, 0.2), rgba(157, 78, 221, 0.1));
+    border-right-color: #9d4edd;
+}
+
+.option-effect {
+    background: rgba(255, 107, 157, 0.2);
+    border-right-color: #f72585;
+}
+
+.tamer-effect {
+    background: rgba(255, 183, 0, 0.2);
+    border-right-color: #ffb700;
+}
+
+.digimon-effect h3 {
+    color: #ffd700;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mega-effect h3 {
+    color: #b185db;
+}
+
+.effect-icon {
+    font-size: 1.1rem;
+}
+
+.digimon-effect p {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.digimon-effect strong {
+    color: #ffd700;
+}
+
+.mega-effect strong {
+    color: #ff6b9d;
+}
+
+/* עלות התפתחות */
+.evolution-cost {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mega-evo {
+    background: linear-gradient(90deg, rgba(157, 78, 221, 0.2), rgba(114, 9, 183, 0.2));
+}
+
+.evo-label {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.evo-value {
+    color: #ffd700;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* תחתית */
+.digimon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-number {
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: monospace;
+}
+
+.digimon-rare {
+    background: linear-gradient(135deg, #fff, #e0e0e0);
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.digimon-secret {
+    background: linear-gradient(135deg, #9d4edd, #7209b7);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    animation: secretGlow 2s ease-in-out infinite;
+}
+
+@keyframes secretGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(157, 78, 221, 1);
+    }
+}
+
+/* אופציה */
+.option-content,
+.tamer-content {
+    padding: 20px 15px;
+}
+
+.option-icon,
+.tamer-icon {
+    font-size: 2rem;
+}
+
+.option-art,
+.tamer-art {
+    height: 280px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.option-image,
+.tamer-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.option-name {
+    font-size: 1.3rem;
+}
+
+.tamer-name {
+    font-size: 1.3rem;
+}
+
+/* זוהרים */
+.digimon-glow-rookie {
+    box-shadow: 
+        0 0 25px rgba(249, 199, 79, 0.6),
+        inset 0 0 25px rgba(248, 150, 30, 0.3);
+}
+
+.digimon-glow-mega {
+    box-shadow: 
+        0 0 35px rgba(157, 78, 221, 0.8),
+        inset 0 0 35px rgba(114, 9, 183, 0.4);
+    animation: megaGlow 3s ease-in-out infinite;
+}
+
+@keyframes megaGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 35px rgba(157, 78, 221, 0.8),
+            inset 0 0 35px rgba(114, 9, 183, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(157, 78, 221, 1),
+            inset 0 0 50px rgba(114, 9, 183, 0.6);
+    }
+}
+
+.digimon-glow-option {
+    box-shadow: 
+        0 0 25px rgba(247, 37, 133, 0.6),
+        inset 0 0 25px rgba(201, 24, 74, 0.3);
+}
+
+.digimon-glow-tamer {
+    box-shadow: 
+        0 0 25px rgba(255, 183, 0, 0.6),
+        inset 0 0 25px rgba(255, 149, 0, 0.3);
+}
+
+/* מידע */
+.digimon-info {
+    background: linear-gradient(135deg, rgba(249, 199, 79, 0.1), rgba(82, 183, 136, 0.1));
+    border: 2px solid rgba(249, 199, 79, 0.4);
+}
+
+.digimon-info li {
+    border-right: 4px solid #52b788;
+}
+
+.digimon-info li:hover {
+    background: rgba(82, 183, 136, 0.2);
+}
+

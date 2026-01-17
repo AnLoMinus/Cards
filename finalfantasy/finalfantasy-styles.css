@@ -1,0 +1,661 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי Final Fantasy TCG
+   ======================================== */
+
+.ff-card {
+  font-family: "Optima", "Palatino", "Georgia", serif;
+  width: 350px;
+  height: 490px;
+}
+
+/* רקעים לפי אלמנט */
+.ff-fire {
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 50%, #990000 100%);
+}
+
+.ff-ice {
+  background: linear-gradient(135deg, #88d3f0 0%, #4db8e8 50%, #1a8fb8 100%);
+}
+
+.ff-lightning {
+  background: linear-gradient(135deg, #ffd700 0%, #ffaa00 50%, #ff8800 100%);
+}
+
+.ff-wind {
+  background: linear-gradient(135deg, #90ee90 0%, #50c878 50%, #228b22 100%);
+}
+
+.ff-earth {
+  background: linear-gradient(135deg, #d4a574 0%, #a67c52 50%, #7a5230 100%);
+}
+
+.ff-water {
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 50%, #0288d1 100%);
+}
+
+.ff-dark {
+  background: linear-gradient(135deg, #6a0dad 0%, #4b0082 50%, #2e0854 100%);
+}
+
+.ff-light {
+  background: linear-gradient(135deg, #fff9e6 0%, #ffe680 50%, #ffd633 100%);
+}
+
+/* תבנית קריסטל FF */
+.crystal-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      30deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.05) 45%,
+      rgba(255, 255, 255, 0.05) 55%,
+      transparent 55%
+    ),
+    linear-gradient(
+      150deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.05) 45%,
+      rgba(255, 255, 255, 0.05) 55%,
+      transparent 55%
+    );
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+  animation: crystalShimmer 8s linear infinite;
+}
+
+@keyframes crystalShimmer {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+/* תוכן כרטיס */
+.ff-content {
+  position: relative;
+  z-index: 3;
+  padding: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* כותרת */
+.ff-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.element-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 2px solid #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fire-icon {
+  background: radial-gradient(circle, #ff6644, #cc0000);
+}
+
+.ice-icon {
+  background: radial-gradient(circle, #88d3f0, #1a8fb8);
+}
+
+.lightning-icon {
+  background: radial-gradient(circle, #ffd700, #ff8800);
+}
+
+.water-icon {
+  background: radial-gradient(circle, #4fc3f7, #0288d1);
+}
+
+.wind-icon {
+  background: radial-gradient(circle, #90ee90, #228b22);
+}
+
+.earth-icon {
+  background: radial-gradient(circle, #d4a574, #7a5230);
+}
+
+.dark-icon {
+  background: radial-gradient(circle, #8b5cf6, #2e0854);
+}
+
+.light-icon {
+  background: radial-gradient(circle, #ffe680, #ffd633);
+}
+
+.card-name-section {
+  flex: 1;
+}
+
+.ff-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000;
+  letter-spacing: 1px;
+}
+
+.summon-name {
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #ffd700, #fff, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.9));
+}
+
+.ff-job {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.cost-section {
+  display: flex;
+  align-items: center;
+}
+
+.cp-cost {
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.summon-cost {
+  border-color: #ff6b9d;
+  box-shadow: 0 0 15px rgba(255, 107, 157, 0.6);
+}
+
+.cost-label {
+  font-size: 0.7rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.cost-value {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+/* אזור תמונה */
+.ff-artwork {
+  position: relative;
+  background: #000;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  height: 220px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.summon-artwork,
+.backup-artwork {
+  height: 250px;
+}
+
+.power-display {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 3px solid #ffd700;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+}
+
+.power-value {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.ff-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.summon-badge,
+.backup-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #ffd700, #ff6b9d);
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 0.75rem;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 3px 10px rgba(255, 107, 157, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.8);
+  }
+}
+
+/* מידע */
+.ff-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ff-abilities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ff-ability {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border-right: 3px solid #ffd700;
+}
+
+.ff-ability h3 {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ff-ability p {
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.ff-ability strong {
+  color: #4fc3f7;
+}
+
+/* Summon Effects */
+.summon-effect {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 107, 157, 0.1)
+  );
+  padding: 12px;
+  border-radius: 8px;
+  border-right: 3px solid #ff6b9d;
+}
+
+.summon-effect h3 {
+  color: #ff6b9d;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summon-effect p {
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.effect-note {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem !important;
+  margin-top: 10px !important;
+}
+
+.category-info {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.category-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.category-value {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* תחתית */
+.ff-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-number {
+  color: #fff;
+  font-size: 0.7rem;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.rarity {
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.ff-hero {
+  background: linear-gradient(135deg, #ffd700, #ff6b9d);
+  color: #fff;
+  animation: heroGlow 2s ease-in-out infinite;
+}
+
+.ff-legend {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899, #ffd700);
+  background-size: 200% 200%;
+  color: #fff;
+  animation: legendShine 3s ease infinite;
+}
+
+.ff-rare {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: #fff;
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+  }
+}
+
+@keyframes legendShine {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.series-icon {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* זוהרים */
+.ff-glow-fire {
+  box-shadow: 0 0 30px rgba(255, 68, 68, 0.7),
+    inset 0 0 30px rgba(204, 0, 0, 0.4);
+}
+
+.ff-glow-ice {
+  box-shadow: 0 0 30px rgba(136, 211, 240, 0.7),
+    inset 0 0 30px rgba(77, 184, 232, 0.4);
+}
+
+.ff-glow-lightning {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.8),
+    inset 0 0 35px rgba(255, 170, 0, 0.5);
+  animation: lightningGlow 2s ease-in-out infinite;
+}
+
+@keyframes lightningGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.8),
+      inset 0 0 35px rgba(255, 170, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 215, 0, 1),
+      inset 0 0 50px rgba(255, 170, 0, 0.7);
+  }
+}
+
+.ff-glow-water {
+  box-shadow: 0 0 30px rgba(79, 195, 247, 0.7),
+    inset 0 0 30px rgba(2, 136, 209, 0.4);
+}
+
+.ff-glow-wind {
+  box-shadow: 0 0 30px rgba(144, 238, 144, 0.7),
+    inset 0 0 30px rgba(80, 200, 120, 0.4);
+}
+
+.ff-glow-earth {
+  box-shadow: 0 0 30px rgba(212, 165, 116, 0.7),
+    inset 0 0 30px rgba(166, 124, 82, 0.4);
+}
+
+.ff-glow-dark {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.8),
+    inset 0 0 40px rgba(75, 0, 130, 0.5);
+  animation: darkGlow 3s ease-in-out infinite;
+}
+
+@keyframes darkGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8),
+      inset 0 0 40px rgba(75, 0, 130, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(139, 92, 246, 1),
+      inset 0 0 60px rgba(75, 0, 130, 0.7);
+  }
+}
+
+.ff-glow-light {
+  box-shadow: 0 0 35px rgba(255, 230, 128, 0.8),
+    inset 0 0 35px rgba(255, 214, 51, 0.5);
+}
+
+/* מידע על תבניות */
+.ff-info {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.ff-info li {
+  border-right: 4px solid #8b5cf6;
+}
+
+.ff-info li:hover {
+   background: rgba(139, 92, 246, 0.2);
+}
+
+/* סגנונות Legend */
+.legend-name {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ffd700, #fff, #8b5cf6, #ec4899);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: legendTextShine 4s ease infinite;
+    filter: drop-shadow(3px 3px 5px rgba(0,0,0,1));
+}
+
+@keyframes legendTextShine {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.legend-cost {
+    border-color: #ec4899;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+    animation: legendCostGlow 2s ease-in-out infinite;
+}
+
+@keyframes legendCostGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(236, 72, 153, 1);
+    }
+}
+
+.legend-art {
+    border-color: #ec4899;
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.7);
+}
+
+.legend-power {
+    border-color: #ec4899;
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.8);
+    animation: legendPowerPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes legendPowerPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(236, 72, 153, 0.8);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 30px rgba(236, 72, 153, 1);
+    }
+}
+
+.legend-ability {
+    background: linear-gradient(90deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.15));
+    border-right-color: #ec4899;
+}
+
+.legend-ability h3 {
+    color: #ec4899;
+}
+
+/* סגנונות Common */
+.ff-common {
+    background: linear-gradient(135deg, #9ca3af, #6b7280);
+    color: #fff;
+}
+
+/* אפקטים נוספים לכרטיסים */
+.ff-card[data-element="fire"]:hover .element-icon {
+    animation: fireIconPulse 1s ease-in-out infinite;
+}
+
+@keyframes fireIconPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(255, 68, 68, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(255, 68, 68, 1);
+    }
+}
+
+.ff-card[data-element="ice"]:hover .element-icon {
+    animation: iceIconPulse 1s ease-in-out infinite;
+}
+
+@keyframes iceIconPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(136, 211, 240, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(136, 211, 240, 1);
+    }
+}
+
+.ff-card[data-element="lightning"]:hover .element-icon {
+    animation: lightningIconPulse 1s ease-in-out infinite;
+}
+
+@keyframes lightningIconPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(255, 215, 0, 1);
+    }
+}
+
+.ff-card[data-element="dark"]:hover .element-icon {
+    animation: darkIconPulse 1s ease-in-out infinite;
+}
+
+@keyframes darkIconPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(139, 92, 246, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(139, 92, 246, 1);
+    }
+}

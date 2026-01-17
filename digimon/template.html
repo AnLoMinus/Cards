@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תבנית כרטיסי דיגימון</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="digimon-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🦖 תבנית כרטיסי דיגימון (Digimon)</h1>
+
+        <div class="template-info digimon-info">
+            <h2>סוגי כרטיסים</h2>
+            <ul>
+                <li><strong>Rookie</strong> - רמת רוקי (צהוב)</li>
+                <li><strong>Champion</strong> - רמת אלוף (ירוק)</li>
+                <li><strong>Ultimate</strong> - רמה סופית (כחול)</li>
+                <li><strong>Mega</strong> - רמת מגה (סגול)</li>
+                <li><strong>Option Card</strong> - כרטיס אופציה</li>
+                <li><strong>Tamer Card</strong> - כרטיס מאלף</li>
+            </ul>
+        </div>
+
+        <div class="cards-grid">
+            <!-- כרטיס Rookie -->
+            <div class="card-wrapper">
+                <div class="card digimon-card" data-card-type="rookie">
+                    <div class="card-inner">
+                        <div class="card-background digimon-rookie"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="digimon-pattern"></div>
+
+                        <div class="card-content digimon-content">
+                            <div class="digimon-header">
+                                <div class="digimon-level rookie-level">
+                                    <span>Lv.3</span>
+                                </div>
+                                <h2 class="digimon-name">Agumon</h2>
+                                <div class="digimon-cost">
+                                    <span class="cost-value">3</span>
+                                </div>
+                            </div>
+
+                            <div class="digimon-art">
+                                <div class="dp-value">
+                                    <span class="dp-label">DP</span>
+                                    <span class="dp-number">3000</span>
+                                </div>
+                                <div class="digimon-image">
+                                    <p class="placeholder-text">תמונת הדיגימון</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-info">
+                                <div class="digimon-type">
+                                    <div class="type-badge rookie-badge">Rookie</div>
+                                    <div class="attribute-badge fire">🔥 Fire</div>
+                                </div>
+
+                                <div class="digimon-effect">
+                                    <h3><span class="effect-icon">⚡</span> Baby Flame</h3>
+                                    <p><strong>[Your Turn]</strong> כאשר הדיגימון הזה תוקף, כל הדיגימונים האדומים שלך
+                                        מקבלים +1000 DP עד סוף התור.</p>
+                                </div>
+
+                                <div class="evolution-cost">
+                                    <span class="evo-label">Evolution Cost:</span>
+                                    <span class="evo-value">2 מ-Lv.2</span>
+                                </div>
+                            </div>
+
+                            <div class="digimon-footer">
+                                <div class="card-number">BT1-010</div>
+                                <div class="rarity digimon-rare">C</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow digimon-glow-rookie"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Mega -->
+            <div class="card-wrapper">
+                <div class="card digimon-card" data-card-type="mega">
+                    <div class="card-inner">
+                        <div class="card-background digimon-mega"></div>
+                        <div class="rainbow-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content digimon-content">
+                            <div class="digimon-header">
+                                <div class="digimon-level mega-level">
+                                    <span>Lv.6</span>
+                                </div>
+                                <h2 class="digimon-name mega-name">WarGreymon</h2>
+                                <div class="digimon-cost mega-cost">
+                                    <span class="cost-value">12</span>
+                                </div>
+                            </div>
+
+                            <div class="digimon-art mega-art">
+                                <div class="dp-value mega-dp">
+                                    <span class="dp-label">DP</span>
+                                    <span class="dp-number">12000</span>
+                                </div>
+                                <div class="digimon-image">
+                                    <p class="placeholder-text">תמונת הדיגימון</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-info">
+                                <div class="digimon-type mega-type">
+                                    <div class="type-badge mega-badge">Mega</div>
+                                    <div class="attribute-badge fire">🔥 Fire / Dragon</div>
+                                </div>
+
+                                <div class="digimon-effect mega-effect">
+                                    <h3><span class="effect-icon">💥</span> Gaia Force</h3>
+                                    <p><strong>[When Digivolving]</strong> השמד אחד מהדיגימונים של היריב עם 10000 DP או
+                                        פחות.</p>
+                                    <p><strong>[All Turns]</strong> כרטיס זה לא יכול להיהרס בקרב.</p>
+                                </div>
+
+                                <div class="evolution-cost mega-evo">
+                                    <span class="evo-label">Evolution Cost:</span>
+                                    <span class="evo-value">4 מ-Lv.5</span>
+                                </div>
+                            </div>
+
+                            <div class="digimon-footer">
+                                <div class="card-number">BT1-045</div>
+                                <div class="rarity digimon-secret">SR</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow digimon-glow-mega"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Option -->
+            <div class="card-wrapper">
+                <div class="card digimon-card" data-card-type="option">
+                    <div class="card-inner">
+                        <div class="card-background digimon-option"></div>
+                        <div class="holographic-layer"></div>
+
+                        <div class="card-content digimon-content option-content">
+                            <div class="digimon-header option-header">
+                                <div class="option-icon">⚙️</div>
+                                <h2 class="digimon-name option-name">Brave Shield</h2>
+                                <div class="digimon-cost">
+                                    <span class="cost-value">2</span>
+                                </div>
+                            </div>
+
+                            <div class="option-art">
+                                <div class="option-image">
+                                    <p class="placeholder-text">תמונת האופציה</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-info option-info">
+                                <div class="option-type">
+                                    <div class="type-badge option-badge">Option</div>
+                                </div>
+
+                                <div class="digimon-effect option-effect">
+                                    <h3>אפקט מיידי</h3>
+                                    <p><strong>[Main]</strong> אחד מהדיגימונים שלך מקבל +3000 DP עד סוף תור היריב.</p>
+                                    <p><strong>[Security]</strong> שלוף קלף אחד והוסף אותו ליד.</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-footer">
+                                <div class="card-number">BT1-085</div>
+                                <div class="rarity digimon-rare">U</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow digimon-glow-option"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Tamer -->
+            <div class="card-wrapper">
+                <div class="card digimon-card" data-card-type="tamer">
+                    <div class="card-inner">
+                        <div class="card-background digimon-tamer"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content digimon-content tamer-content">
+                            <div class="digimon-header tamer-header">
+                                <div class="tamer-icon">👤</div>
+                                <h2 class="digimon-name tamer-name">Tai Kamiya</h2>
+                                <div class="digimon-cost">
+                                    <span class="cost-value">2</span>
+                                </div>
+                            </div>
+
+                            <div class="tamer-art">
+                                <div class="tamer-image">
+                                    <p class="placeholder-text">תמונת המאלף</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-info tamer-info">
+                                <div class="option-type">
+                                    <div class="type-badge tamer-badge">Tamer</div>
+                                </div>
+
+                                <div class="digimon-effect tamer-effect">
+                                    <h3><span class="effect-icon">⭐</span> יכולת מאלף</h3>
+                                    <p><strong>[Start of Main Phase]</strong> אם יש לך דיגימון אדום, שלוף קלף אחד.</p>
+                                    <p><strong>[All Turns]</strong> כל הדיגימונים האדומים שלך מקבלים +1000 DP.</p>
+                                </div>
+                            </div>
+
+                            <div class="digimon-footer">
+                                <div class="card-number">BT1-085</div>
+                                <div class="rarity digimon-rare">R</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow digimon-glow-tamer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization-guide">
+            <h2>🎨 מדריך עיצוב כרטיסי דיגימון</h2>
+            <div class="guide-sections">
+                <div class="guide-section">
+                    <h3>רמות דיגימון</h3>
+                    <p>שנה את <code>data-card-type</code>:</p>
+                    <pre>rookie (Lv.3)
+champion (Lv.4)
+ultimate (Lv.5)
+mega (Lv.6)</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>צבעים/תכונות</h3>
+                    <p>צבעים זמינים:</p>
+                    <pre>🔴 Red - אדום
+🔵 Blue - כחול
+🟡 Yellow - צהוב
+🟢 Green - ירוק
+⚫ Black - שחור
+🟣 Purple - סגול
+⚪ White - לבן</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>רמות נדירות</h3>
+                    <p>רמות:</p>
+                    <pre>C - Common
+U - Uncommon
+R - Rare
+SR - Super Rare
+SEC - Secret Rare</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>סוגי קלפים מיוחדים</h3>
+                    <p>סוגים:</p>
+                    <pre>option - קלף אופציה
+tamer - קלף מאלף
+egg - קלף ביצה</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- תפריט שכבות צף -->
+    <div class="layers-menu" id="layersMenu">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="toggle-icon">⚙️</span>
+            <span class="toggle-text">שכבות</span>
+        </div>
+
+        <div class="menu-content" id="menuContent">
+            <div class="menu-header">
+                <h3>🎨 בקרת שכבות</h3>
+                <button class="close-btn" id="closeMenu">✕</button>
+            </div>
+
+            <div class="menu-body">
+                <div class="layer-group">
+                    <h4>שכבות בסיסיות</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-background" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎨 רקע (Background)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-holographic" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">✨ הולוגרפיה (Holographic)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-crystal" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💎 קריסטל (Crystal)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-rainbow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌈 קשת (Rainbow)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>אפקטים</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-sparkles" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">⭐ ניצוצות (Sparkles)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-border-glow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💫 זוהר מסגרת (Border Glow)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-3d" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎭 אפקט 3D (3D Effect)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>תוכן</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-content" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">📝 תוכן כרטיס (Content)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-text-shadow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌑 צללי טקסט (Text Shadows)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>פעולות מהירות</h4>
+
+                    <div class="quick-actions">
+                        <button class="action-btn" id="enableAll">
+                            ✅ הפעל הכל
+                        </button>
+                        <button class="action-btn" id="disableAll">
+                            ❌ כבה הכל
+                        </button>
+                        <button class="action-btn" id="resetLayers">
+                            🔄 איפוס
+                        </button>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>מצבי תצוגה</h4>
+
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="full">
+                            🌟 מלא
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            📄 מינימלי
+                        </button>
+                        <button class="preset-btn" data-preset="effects-only">
+                            ✨ אפקטים בלבד
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="digimon-script.js"></script>
+</body>
+
+</html>

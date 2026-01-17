@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תבנית כרטיסי פוקימון</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="pokemon-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🎴 תבנית כרטיסי פוקימון</h1>
+
+        <div class="template-info">
+            <h2>סוגי כרטיסים זמינים</h2>
+            <ul>
+                <li><strong>Holographic</strong> - הולוגרפי קלאסי</li>
+                <li><strong>Reverse Holo</strong> - הולו הפוך</li>
+                <li><strong>Full Art</strong> - ארט מלא</li>
+                <li><strong>Rainbow Rare</strong> - קשת נדיר</li>
+                <li><strong>Gold Secret</strong> - סוד זהב</li>
+                <li><strong>Crystal</strong> - קריסטל</li>
+            </ul>
+        </div>
+
+        <div class="cards-grid">
+            <!-- כרטיס Holographic קלאסי -->
+            <div class="card-wrapper">
+                <div class="card pokemon-card" data-card-type="holographic">
+                    <div class="card-inner">
+                        <div class="card-background"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h2 class="pokemon-name">שם הפוקימון</h2>
+                                <div class="hp">HP 120</div>
+                            </div>
+
+                            <div class="pokemon-image">
+                                <div class="energy-symbol electric">⚡</div>
+                                <p class="placeholder-text">הוסף תמונה כאן</p>
+                            </div>
+
+                            <div class="pokemon-info">
+                                <div class="type-info">
+                                    <span class="pokemon-type">סוג: חשמל</span>
+                                    <span class="evolution">שלב התפתחות: 1</span>
+                                </div>
+
+                                <div class="ability">
+                                    <h3>יכולת: שם היכולת</h3>
+                                    <p>תיאור היכולת המיוחדת של הפוקימון</p>
+                                </div>
+
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">⚡⚡</div>
+                                        <div class="attack-info">
+                                            <h4>שם ההתקפה</h4>
+                                            <span class="damage">90</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="weakness-resistance">
+                                    <div class="weakness">
+                                        <span>חולשה:</span>
+                                        <span class="type-icon">🌍 ×2</span>
+                                    </div>
+                                    <div class="resistance">
+                                        <span>התנגדות:</span>
+                                        <span class="type-icon">⚔️ -20</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="retreat-cost">עלות נסיגה: ⚪</div>
+                                <div class="card-number">001/100</div>
+                                <div class="rarity">★★★</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Full Art -->
+            <div class="card-wrapper">
+                <div class="card pokemon-card" data-card-type="full-art">
+                    <div class="card-inner">
+                        <div class="card-background full-art-bg"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="texture-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content full-art-content">
+                            <div class="card-header">
+                                <h2 class="pokemon-name">פוקימון Full Art</h2>
+                                <div class="hp">HP 200</div>
+                            </div>
+
+                            <div class="pokemon-image-fullart">
+                                <div class="energy-symbol fire">🔥</div>
+                            </div>
+
+                            <div class="pokemon-info">
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🔥🔥🔥</div>
+                                        <div class="attack-info">
+                                            <h4>התקפה מיוחדת</h4>
+                                            <span class="damage">150</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="rarity">★★★★ ULTRA RARE</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow gold"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס V-MAX -->
+            <div class="card-wrapper">
+                <div class="card pokemon-card" data-card-type="vmax">
+                    <div class="card-inner">
+                        <div class="card-background vmax-bg"></div>
+                        <div class="rainbow-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content vmax-content">
+                            <div class="card-header">
+                                <h2 class="pokemon-name">פוקימון VMAX</h2>
+                                <div class="hp">HP 320</div>
+                            </div>
+
+                            <div class="vmax-badge">VMAX</div>
+
+                            <div class="pokemon-image-vmax">
+                                <div class="energy-symbol psychic">🔮</div>
+                            </div>
+
+                            <div class="pokemon-info">
+                                <div class="ability vmax-ability">
+                                    <h3>יכולת VMAX</h3>
+                                    <p>יכולת מיוחדת חזקה במיוחד</p>
+                                </div>
+
+                                <div class="attacks">
+                                    <div class="attack">
+                                        <div class="attack-cost">🔮🔮🔮🔮</div>
+                                        <div class="attack-info">
+                                            <h4>G-MAX Attack</h4>
+                                            <span class="damage">300</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="rarity">★★★★★ VMAX</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow rainbow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization-guide">
+            <h2>📝 מדריך התאמה אישית</h2>
+            <div class="guide-sections">
+                <div class="guide-section">
+                    <h3>שינוי צבעים</h3>
+                    <p>ערוך את קובץ <code>pokemon-styles.css</code> ושנה את המשתנים:</p>
+                    <pre>--primary-color, --secondary-color, --accent-color</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>הוספת תמונות</h3>
+                    <p>החלף את <code>placeholder-text</code> ב-<code>&lt;img src="..."&gt;</code></p>
+                </div>
+
+                <div class="guide-section">
+                    <h3>אפקטים נוספים</h3>
+                    <p>הוסף classes: <code>ultra-rare</code>, <code>secret-rare</code>, <code>gold-card</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- תפריט שכבות צף -->
+    <div class="layers-menu" id="layersMenu">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="toggle-icon">⚙️</span>
+            <span class="toggle-text">שכבות</span>
+        </div>
+
+        <div class="menu-content" id="menuContent">
+            <div class="menu-header">
+                <h3>🎨 בקרת שכבות</h3>
+                <button class="close-btn" id="closeMenu">✕</button>
+            </div>
+
+            <div class="menu-body">
+                <div class="layer-group">
+                    <h4>שכבות בסיסיות</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-background" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎨 רקע (Background)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-holographic" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">✨ הולוגרפיה (Holographic)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-crystal" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💎 קריסטל (Crystal)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-rainbow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌈 קשת (Rainbow)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>אפקטים</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-sparkles" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">⭐ ניצוצות (Sparkles)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-border-glow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💫 זוהר מסגרת (Border Glow)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-3d" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎭 אפקט 3D (3D Effect)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>תוכן</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-content" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">📝 תוכן כרטיס (Content)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-text-shadow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌑 צללי טקסט (Text Shadows)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>פעולות מהירות</h4>
+
+                    <div class="quick-actions">
+                        <button class="action-btn" id="enableAll">
+                            ✅ הפעל הכל
+                        </button>
+                        <button class="action-btn" id="disableAll">
+                            ❌ כבה הכל
+                        </button>
+                        <button class="action-btn" id="resetLayers">
+                            🔄 איפוס
+                        </button>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>מצבי תצוגה</h4>
+
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="full">
+                            🌟 מלא
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            📄 מינימלי
+                        </button>
+                        <button class="preset-btn" data-preset="effects-only">
+                            ✨ אפקטים בלבד
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
