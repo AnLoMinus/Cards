@@ -1,0 +1,98 @@
+/* ========================================
+   שכבה 1: שלד/מסגרת - Wireframe Layer
+   ======================================== */
+
+/* מבנה בסיסי - שחור על לבן */
+.wireframe-layer {
+    /* כל האלמנטים בשכבה זו */
+    position: relative;
+    z-index: 1;
+}
+
+/* מסגרת הקלף */
+.wireframe-card-frame {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    background: #fff;
+}
+
+/* מסגרות אזורים */
+.wireframe-section {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+/* מסגרת כותרת */
+.wireframe-header {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* מסגרת תיבת נושא */
+.wireframe-theme-box {
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    min-height: 80px;
+}
+
+/* מסגרת דירוג */
+.wireframe-rating {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* מסגרת פסוק */
+.wireframe-verse {
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+/* קווי הפרדה */
+.wireframe-divider {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* הסתרת שכבה */
+.wireframe-layer.layer-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.wireframe-layer {
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+/* כאשר רק שכבת השלד פעילה - הצג רק קווים */
+body.wireframe-only .parasha-card {
+    background: #fff !important;
+}
+
+body.wireframe-only * {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+body.wireframe-only .wireframe-section,
+body.wireframe-only .wireframe-header,
+body.wireframe-only .wireframe-theme-box,
+body.wireframe-only .wireframe-rating,
+body.wireframe-only .wireframe-verse {
+    border: 1px solid #000 !important;
+}
+

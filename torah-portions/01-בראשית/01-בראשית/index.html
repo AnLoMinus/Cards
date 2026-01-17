@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרשת בראשית - קלף לימוד</title>
+
+    <!-- קישור לכל קבצי CSS בנפרד -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/glow-layer.css">
+    <link rel="stylesheet" href="styles/header-layer.css">
+    <link rel="stylesheet" href="styles/title-layer.css">
+    <link rel="stylesheet" href="styles/theme-layer.css">
+    <link rel="stylesheet" href="styles/sections-layer.css">
+    <link rel="stylesheet" href="styles/values-layer.css">
+    <link rel="stylesheet" href="styles/rating-layer.css">
+    <link rel="stylesheet" href="styles/verse-layer.css">
+    <link rel="stylesheet" href="styles/control-panel.css">
+    <link rel="stylesheet" href="styles/layers-architecture.css">
+    <link rel="stylesheet" href="styles/photoshop-panel.css">
+</head>
+
+<body>
+    <!-- כפתור צף לפתיחת פאנל פוטושופ -->
+    <button class="floating-toggle" id="floatingToggle">
+        <span>🎨</span>
+        <span>שכבות פוטושופ</span>
+    </button>
+
+    <!-- כפתור פתיחה/סגירה של פאנל השליטה הפשוט -->
+    <button class="panel-toggle" id="panelToggle">⚙️ שליטה מהירה</button>
+
+    <!-- פאנל שליטה -->
+    <div class="control-panel hidden" id="controlPanel">
+        <h3>🎨 בקרת שכבות</h3>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>✨</span>
+                <span>שכבת זוהר</span>
+            </span>
+            <div class="toggle-switch active" data-layer="glow"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>📕</span>
+                <span>כותרת חומש</span>
+            </span>
+            <div class="toggle-switch active" data-layer="header"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>🕎</span>
+                <span>שם הפרשה</span>
+            </span>
+            <div class="toggle-switch active" data-layer="title"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>🌍</span>
+                <span>נושא מרכזי</span>
+            </span>
+            <div class="toggle-switch active" data-layer="theme"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>🔸</span>
+                <span>נקודות מפנה</span>
+            </span>
+            <div class="toggle-switch active" data-layer="turning-points"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>🕰️</span>
+                <span>ציר זמן</span>
+            </span>
+            <div class="toggle-switch active" data-layer="timeline"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>📜</span>
+                <span>עקרונות</span>
+            </span>
+            <div class="toggle-switch active" data-layer="teachings"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>🌿</span>
+                <span>ערכים</span>
+            </span>
+            <div class="toggle-switch active" data-layer="values"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>⭐</span>
+                <span>דירוג</span>
+            </span>
+            <div class="toggle-switch active" data-layer="rating"></div>
+        </div>
+
+        <div class="control-item">
+            <span class="control-label">
+                <span>📖</span>
+                <span>פסוק מוביל</span>
+            </span>
+            <div class="toggle-switch active" data-layer="verse"></div>
+        </div>
+
+        <div class="control-buttons">
+            <button class="control-btn" id="enableAll">✅ הכל</button>
+            <button class="control-btn" id="disableAll">❌ כלום</button>
+            <button class="control-btn" id="resetLayers">🔄 איפוס</button>
+        </div>
+    </div>
+
+    <!-- פאנל פוטושופ מפורט -->
+    <div class="photoshop-panel collapsed" id="photoshopPanel">
+        <div class="panel-header">
+            <h2 class="panel-title">
+                <span>🎨</span>
+                <span>שכבות פוטושופ</span>
+            </h2>
+            <button class="close-panel-btn" id="closePanelBtn">✕</button>
+        </div>
+
+        <!-- שכבה 1: מסגרת -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">🖼️ שכבת מסגרת</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">1</span>
+                    <span class="layer-icon">🔲</span>
+                    <span>מסגרת בסיסית</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="frame"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">2</span>
+                    <span class="layer-icon">✨</span>
+                    <span>זוהר חיצוני</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="glow"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 2: רקע וצבעים -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">🎨 שכבת רקע</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">3</span>
+                    <span class="layer-icon">🌈</span>
+                    <span>רקע צבעוני</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="background"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">4</span>
+                    <span class="layer-icon">💎</span>
+                    <span>גרדיאנט</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="gradient"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 3: כותרות -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">📝 שכבת טקסט - כותרות</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">5</span>
+                    <span class="layer-icon">📕</span>
+                    <span>כותרת חומש</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="header"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">6</span>
+                    <span class="layer-icon">🕎</span>
+                    <span>שם פרשה</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="title"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">7</span>
+                    <span class="layer-icon">🌍</span>
+                    <span>נושא מרכזי</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="theme"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 4: תוכן -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">📄 שכבת תוכן</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">8</span>
+                    <span class="layer-icon">🔸</span>
+                    <span>נקודות מפנה</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="turning-points"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">9</span>
+                    <span class="layer-icon">🕰️</span>
+                    <span>ציר זמן</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="timeline"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">10</span>
+                    <span class="layer-icon">📜</span>
+                    <span>עקרונות</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="teachings"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 5: ערכים ודירוג -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">🌟 שכבת ערכים</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">11</span>
+                    <span class="layer-icon">🌿</span>
+                    <span>תגיות ערכים</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="values"></div>
+            </div>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">12</span>
+                    <span class="layer-icon">⭐</span>
+                    <span>דירוג ועוצמה</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="rating"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 6: פסוק -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">📖 שכבת פסוק</h4>
+
+            <div class="layer-item">
+                <div class="layer-info">
+                    <span class="layer-number">13</span>
+                    <span class="layer-icon">📖</span>
+                    <span>פסוק מוביל</span>
+                </div>
+                <div class="layer-toggle active" data-ps-layer="verse"></div>
+            </div>
+        </div>
+
+        <!-- פעולות מהירות -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">⚡ פעולות מהירות</h4>
+
+            <div class="quick-actions">
+                <button class="action-btn" id="psEnableAll">✅ הפעל הכל</button>
+                <button class="action-btn" id="psDisableAll">❌ כבה הכל</button>
+            </div>
+            <div class="quick-actions">
+                <button class="action-btn" id="psResetLayers">🔄 איפוס</button>
+            </div>
+        </div>
+
+        <!-- Presets -->
+        <div class="layer-group">
+            <h4 class="layer-group-title">🎭 מצבי תצוגה</h4>
+
+            <div class="preset-buttons">
+                <button class="preset-btn" data-preset="full">
+                    🌟 תצוגה מלאה
+                </button>
+                <button class="preset-btn" data-preset="minimal">
+                    📄 מינימלי - טקסט בלבד
+                </button>
+                <button class="preset-btn" data-preset="design-only">
+                    🎨 עיצוב בלבד - ללא טקסט
+                </button>
+                <button class="preset-btn" data-preset="structure">
+                    🏗️ שלד בלבד
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="parasha-card layer-frame" data-layer-element="frame" data-ps-layer-element="frame">
+            <div class="card-glow layer-borders" data-layer-element="glow" data-ps-layer-element="glow"></div>
+
+            <!-- שכבת רקע -->
+            <div class="layer-background" data-ps-layer-element="background"
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #d2691e 100%); border-radius: 20px; z-index: 0;">
+            </div>
+
+            <!-- שכבת גרדיאנט -->
+            <div class="layer-gradient" data-ps-layer-element="gradient" style="position: relative; z-index: 1;"></div>
+
+            <!-- 1. כותרת עליונה -->
+            <div class="header layer-text" data-layer-element="header" data-ps-layer-element="header">
+                <div class="book-name">📕 חומש בראשית</div>
+            </div>
+
+            <!-- 2. כותרת פרשה -->
+            <div class="parasha-title layer-text" data-layer-element="title" data-ps-layer-element="title">
+                <h1 class="parasha-name">בְּרֵאשִׁית</h1>
+                <div class="parasha-english">Bereshit · Genesis</div>
+                <div class="parasha-number">🔢 פרשה 1 מתוך 54</div>
+            </div>
+
+            <!-- 3. מילת מפתח מרכזית -->
+            <div class="theme-box layer-text" data-layer-element="theme" data-ps-layer-element="theme">
+                🌍 בְּרִיאָה
+            </div>
+
+            <!-- 4. נקודות מפנה מרכזיות -->
+            <div class="section layer-text" data-layer-element="turning-points" data-ps-layer-element="turning-points">
+                <h3 class="section-title">
+                    <span class="icon">🔸</span>
+                    נקודות מפנה מרכזיות
+                </h3>
+                <div class="turning-point">🌌 בריאת העולם בששת ימי הבריאה</div>
+                <div class="turning-point">🌳 גן עדן - האדם וחוה</div>
+                <div class="turning-point">🍎 חטא עץ הדעת - גירוש מגן עדן</div>
+                <div class="turning-point">⚔️ קין והבל - הרצח הראשון</div>
+            </div>
+
+            <!-- 5. ציר כרונולוגי מקוצר -->
+            <div class="section layer-text" data-layer-element="timeline" data-ps-layer-element="timeline">
+                <h3 class="section-title">
+                    <span class="icon">🕰️</span>
+                    ציר זמן מרכזי
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div>תוהו ובוהו - אין בריאה</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div>ששת ימי בריאה - יש מאין</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div>גן עדן - מצב אידיאלי</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div>החטא והגירוש - תחילת ההיסטוריה</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. ליקוטים רוחניים -->
+            <div class="section layer-text" data-layer-element="teachings" data-ps-layer-element="teachings">
+                <h3 class="section-title">
+                    <span class="icon">📜</span>
+                    עקרונות נלמדים
+                </h3>
+                <div class="teaching">✨ הכל נברא בדיבור - כוח המילה</div>
+                <div class="teaching">⚖️ בחירה חופשית - יסוד האחריות האנושית</div>
+                <div class="teaching">🌱 האדם שותף לבורא בעבודת העולם</div>
+                <div class="teaching">💔 החטא הראשון - תחילת התיקון</div>
+            </div>
+
+            <!-- 7. ערכים ומידות -->
+            <div class="section layer-text" data-layer-element="values" data-ps-layer-element="values">
+                <h3 class="section-title">
+                    <span class="icon">🌿</span>
+                    ערכים ומידות
+                </h3>
+                <div class="values-container">
+                    <div class="value-badge">✨ אמונה בבורא</div>
+                    <div class="value-badge">🌱 התחלות חדשות</div>
+                    <div class="value-badge">⚖️ בחירה חופשית</div>
+                    <div class="value-badge">🙏 אחריות</div>
+                    <div class="value-badge">🌍 שמירת הבריאה</div>
+                </div>
+            </div>
+
+            <!-- 8. קטגוריה ועוצמה -->
+            <div class="rating-section layer-text" data-layer-element="rating" data-ps-layer-element="rating">
+                <div class="category-badge">📕 בראשית</div>
+                <div class="stars">✡️✡️✡️✡️✡️✡️</div>
+            </div>
+
+            <!-- 9. פסוק מוביל -->
+            <div class="verse-quote layer-text" data-layer-element="verse" data-ps-layer-element="verse">
+                "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ"
+                <div class="verse-reference">בראשית א׳, א׳</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========================================
+        // פאנל 1: שליטה מהירה (פשוט)
+        // ========================================
+        const panelToggle = document.getElementById('panelToggle');
+        const controlPanel = document.getElementById('controlPanel');
+
+        panelToggle.addEventListener('click', () => {
+            controlPanel.classList.toggle('hidden');
+        });
+
+        // מערך לשמירת מצב השכבות
+        const layerStates = {
+            glow: true,
+            header: true,
+            title: true,
+            theme: true,
+            'turning-points': true,
+            timeline: true,
+            teachings: true,
+            values: true,
+            rating: true,
+            verse: true
+        };
+
+        // פונקציה לשינוי מצב שכבה
+        function toggleLayer(layerName, toggle) {
+            const elements = document.querySelectorAll(`[data-layer-element="${layerName}"]`);
+
+            if (toggle.classList.contains('active')) {
+                toggle.classList.remove('active');
+                elements.forEach(el => el.classList.add('layer-off'));
+                layerStates[layerName] = false;
+            } else {
+                toggle.classList.add('active');
+                elements.forEach(el => el.classList.remove('layer-off'));
+                layerStates[layerName] = true;
+            }
+        }
+
+        const toggleSwitches = document.querySelectorAll('.toggle-switch');
+        toggleSwitches.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const layerName = toggle.getAttribute('data-layer');
+                toggleLayer(layerName, toggle);
+            });
+        });
+
+        document.getElementById('enableAll').addEventListener('click', () => {
+            toggleSwitches.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-layer');
+                toggle.classList.add('active');
+                const elements = document.querySelectorAll(`[data-layer-element="${layerName}"]`);
+                elements.forEach(el => el.classList.remove('layer-off'));
+                layerStates[layerName] = true;
+            });
+        });
+
+        document.getElementById('disableAll').addEventListener('click', () => {
+            toggleSwitches.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-layer');
+                toggle.classList.remove('active');
+                const elements = document.querySelectorAll(`[data-layer-element="${layerName}"]`);
+                elements.forEach(el => el.classList.add('layer-off'));
+                layerStates[layerName] = false;
+            });
+        });
+
+        document.getElementById('resetLayers').addEventListener('click', () => {
+            toggleSwitches.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-layer');
+                toggle.classList.add('active');
+                const elements = document.querySelectorAll(`[data-layer-element="${layerName}"]`);
+                elements.forEach(el => el.classList.remove('layer-off'));
+                layerStates[layerName] = true;
+            });
+        });
+
+        // ========================================
+        // פאנל 2: פוטושופ מפורט
+        // ========================================
+        const floatingToggle = document.getElementById('floatingToggle');
+        const photoshopPanel = document.getElementById('photoshopPanel');
+        const closePanelBtn = document.getElementById('closePanelBtn');
+
+        floatingToggle.addEventListener('click', () => {
+            photoshopPanel.classList.remove('collapsed');
+            floatingToggle.classList.add('panel-open');
+        });
+
+        closePanelBtn.addEventListener('click', () => {
+            photoshopPanel.classList.add('collapsed');
+            floatingToggle.classList.remove('panel-open');
+        });
+
+        // מערך מצב שכבות פוטושופ
+        const psLayerStates = {
+            frame: true,
+            glow: true,
+            background: true,
+            gradient: true,
+            header: true,
+            title: true,
+            theme: true,
+            'turning-points': true,
+            timeline: true,
+            teachings: true,
+            values: true,
+            rating: true,
+            verse: true
+        };
+
+        // פונקציה לשינוי מצב שכבת פוטושופ
+        function togglePsLayer(layerName, toggle) {
+            const elements = document.querySelectorAll(`[data-ps-layer-element="${layerName}"]`);
+
+            if (toggle.classList.contains('active')) {
+                toggle.classList.remove('active');
+                elements.forEach(el => el.classList.add('layer-hidden'));
+                psLayerStates[layerName] = false;
+            } else {
+                toggle.classList.add('active');
+                elements.forEach(el => el.classList.remove('layer-hidden'));
+                psLayerStates[layerName] = true;
+            }
+        }
+
+        // הוספת מאזינים למתגים של פוטושופ
+        const psToggles = document.querySelectorAll('.layer-toggle');
+        psToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const layerName = toggle.getAttribute('data-ps-layer');
+                togglePsLayer(layerName, toggle);
+            });
+        });
+
+        // כפתורים מהירים - פוטושופ
+        document.getElementById('psEnableAll').addEventListener('click', () => {
+            psToggles.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-ps-layer');
+                if (!toggle.classList.contains('active')) {
+                    toggle.classList.add('active');
+                    const elements = document.querySelectorAll(`[data-ps-layer-element="${layerName}"]`);
+                    elements.forEach(el => el.classList.remove('layer-hidden'));
+                    psLayerStates[layerName] = true;
+                }
+            });
+        });
+
+        document.getElementById('psDisableAll').addEventListener('click', () => {
+            psToggles.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-ps-layer');
+                if (toggle.classList.contains('active')) {
+                    toggle.classList.remove('active');
+                    const elements = document.querySelectorAll(`[data-ps-layer-element="${layerName}"]`);
+                    elements.forEach(el => el.classList.add('layer-hidden'));
+                    psLayerStates[layerName] = false;
+                }
+            });
+        });
+
+        document.getElementById('psResetLayers').addEventListener('click', () => {
+            psToggles.forEach(toggle => {
+                const layerName = toggle.getAttribute('data-ps-layer');
+                if (!toggle.classList.contains('active')) {
+                    toggle.classList.add('active');
+                    const elements = document.querySelectorAll(`[data-ps-layer-element="${layerName}"]`);
+                    elements.forEach(el => el.classList.remove('layer-hidden'));
+                    psLayerStates[layerName] = true;
+                }
+            });
+        });
+
+        // Presets - מצבי תצוגה מוגדרים מראש
+        const presetButtons = document.querySelectorAll('.preset-btn');
+        presetButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const preset = btn.getAttribute('data-preset');
+                applyPreset(preset);
+            });
+        });
+
+        function applyPreset(preset) {
+            const presets = {
+                'full': {
+                    frame: true, glow: true, background: true, gradient: true,
+                    header: true, title: true, theme: true,
+                    'turning-points': true, timeline: true, teachings: true,
+                    values: true, rating: true, verse: true
+                },
+                'minimal': {
+                    frame: true, glow: false, background: true, gradient: false,
+                    header: true, title: true, theme: false,
+                    'turning-points': true, timeline: false, teachings: true,
+                    values: false, rating: true, verse: true
+                },
+                'design-only': {
+                    frame: true, glow: true, background: true, gradient: true,
+                    header: false, title: false, theme: false,
+                    'turning-points': false, timeline: false, teachings: false,
+                    values: false, rating: false, verse: false
+                },
+                'structure': {
+                    frame: true, glow: false, background: true, gradient: false,
+                    header: false, title: true, theme: false,
+                    'turning-points': false, timeline: false, teachings: false,
+                    values: false, rating: false, verse: false
+                }
+            };
+
+            const config = presets[preset];
+            if (!config) return;
+
+            Object.keys(config).forEach(layerName => {
+                const toggle = document.querySelector(`[data-ps-layer="${layerName}"]`);
+                const elements = document.querySelectorAll(`[data-ps-layer-element="${layerName}"]`);
+
+                if (toggle) {
+                    if (config[layerName]) {
+                        toggle.classList.add('active');
+                        elements.forEach(el => el.classList.remove('layer-hidden'));
+                    } else {
+                        toggle.classList.remove('active');
+                        elements.forEach(el => el.classList.add('layer-hidden'));
+                    }
+                    psLayerStates[layerName] = config[layerName];
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

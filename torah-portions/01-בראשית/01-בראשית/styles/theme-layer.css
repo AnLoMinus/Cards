@@ -1,0 +1,23 @@
+/* שכבת נושא מרכזי - Theme Layer */
+.theme-box {
+  background: linear-gradient(135deg, #ffd700, #ff6b6b);
+  color: #2c1810;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.theme-box.layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.theme-box {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

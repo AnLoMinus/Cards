@@ -1,0 +1,35 @@
+/* שכבת דירוג - Rating Layer */
+.rating-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.category-badge {
+  background: linear-gradient(135deg, #8b4513, #d2691e);
+  color: #ffd700;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid #ffd700;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.rating-section.layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.rating-section {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

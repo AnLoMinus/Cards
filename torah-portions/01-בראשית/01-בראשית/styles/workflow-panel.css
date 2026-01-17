@@ -1,0 +1,248 @@
+/* ========================================
+   פאנל בקרה לפי תהליך עבודה - Workflow Panel
+   ======================================== */
+
+.workflow-panel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(15px);
+  border: 3px solid #ffd700;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 380px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 10000;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.workflow-panel.collapsed {
+  display: none;
+}
+
+.workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ffd700;
+}
+
+.workflow-title {
+  color: #ffd700;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workflow-close-btn {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.workflow-close-btn:hover {
+  background: #ffd700;
+  color: #000;
+  transform: rotate(90deg);
+}
+
+/* שכבות לפי תהליך */
+.workflow-layer {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.workflow-layer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.workflow-layer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.workflow-layer-number {
+  background: #ffd700;
+  color: #000;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.workflow-layer-title {
+  color: #ffd700;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workflow-layer-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+/* מתג שכבה */
+.workflow-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: #444;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: 2px solid #666;
+}
+
+.workflow-toggle.active {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  border-color: #4ecdc4;
+}
+
+.workflow-toggle::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.workflow-toggle.active::after {
+  transform: translateX(30px);
+  background: #ffd700;
+}
+
+/* צבעי שכבות */
+.workflow-layer.layer-1 {
+  border-right: 4px solid #999;
+}
+
+.workflow-layer.layer-2 {
+  border-right: 4px solid #4ecdc4;
+}
+
+.workflow-layer.layer-3 {
+  border-right: 4px solid #ff6b6b;
+}
+
+.workflow-layer.layer-4 {
+  border-right: 4px solid #ffd700;
+}
+
+/* Presets */
+.workflow-presets {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.workflow-presets-title {
+  color: #4ecdc4;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.workflow-preset-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-align: right;
+}
+
+.workflow-preset-btn:hover {
+  background: #ffd700;
+  color: #000;
+  transform: translateX(-3px);
+}
+
+.workflow-preset-btn .preset-layers {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  display: block;
+  margin-top: 5px;
+}
+
+/* כפתור Toggle */
+.workflow-toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #000, #1a1a2e);
+  border: 3px solid #ffd700;
+  color: #ffd700;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workflow-toggle-btn:hover {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  transform: scale(1.05);
+}
+
+.workflow-toggle-btn.panel-open {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .workflow-panel {
+    left: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .workflow-toggle-btn {
+    left: 10px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}

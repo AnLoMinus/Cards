@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרשת בראשית - גרסה 3.0 | מערכת שכבות לפי תהליך עבודה</title>
+
+    <!-- CSS לפי תהליך עבודה -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layer-1-wireframe.css">
+    <link rel="stylesheet" href="styles/layer-2-content.css">
+    <link rel="stylesheet" href="styles/layer-3-colors.css">
+    <link rel="stylesheet" href="styles/layer-4-effects.css">
+    <link rel="stylesheet" href="styles/workflow-panel.css">
+</head>
+
+<body>
+    <!-- כפתור Toggle -->
+    <button class="workflow-toggle-btn" id="workflowToggle">
+        <span>🎨</span>
+        <span>שכבות תהליך עבודה</span>
+    </button>
+
+    <!-- פאנל תהליך עבודה -->
+    <div class="workflow-panel collapsed" id="workflowPanel">
+        <div class="workflow-header">
+            <h2 class="workflow-title">
+                <span>🎨</span>
+                <span>שכבות לפי תהליך</span>
+            </h2>
+            <button class="workflow-close-btn" id="workflowClose">✕</button>
+        </div>
+
+        <!-- שכבה 1: שלד -->
+        <div class="workflow-layer layer-1">
+            <div class="workflow-layer-header">
+                <div class="workflow-layer-info">
+                    <div class="workflow-layer-title">
+                        <span class="workflow-layer-number">1</span>
+                        <span>🏗️ שלד/מסגרת</span>
+                    </div>
+                    <div class="workflow-layer-desc">קווים שחורים, מבנה בסיסי</div>
+                </div>
+                <div class="workflow-toggle active" data-workflow-layer="wireframe"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 2: תוכן -->
+        <div class="workflow-layer layer-2">
+            <div class="workflow-layer-header">
+                <div class="workflow-layer-info">
+                    <div class="workflow-layer-title">
+                        <span class="workflow-layer-number">2</span>
+                        <span>📝 תוכן</span>
+                    </div>
+                    <div class="workflow-layer-desc">טקסטים, כותרות, מידע</div>
+                </div>
+                <div class="workflow-toggle active" data-workflow-layer="content"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 3: צבעים -->
+        <div class="workflow-layer layer-3">
+            <div class="workflow-layer-header">
+                <div class="workflow-layer-info">
+                    <div class="workflow-layer-title">
+                        <span class="workflow-layer-number">3</span>
+                        <span>🎨 צבעים</span>
+                    </div>
+                    <div class="workflow-layer-desc">גרדיאנטים, צבעי טקסט</div>
+                </div>
+                <div class="workflow-toggle active" data-workflow-layer="colors"></div>
+            </div>
+        </div>
+
+        <!-- שכבה 4: אפקטים -->
+        <div class="workflow-layer layer-4">
+            <div class="workflow-layer-header">
+                <div class="workflow-layer-info">
+                    <div class="workflow-layer-title">
+                        <span class="workflow-layer-number">4</span>
+                        <span>✨ אפקטים</span>
+                    </div>
+                    <div class="workflow-layer-desc">זוהרים, צללים (סטטי)</div>
+                </div>
+                <div class="workflow-toggle active" data-workflow-layer="effects"></div>
+            </div>
+        </div>
+
+        <!-- Presets -->
+        <div class="workflow-presets">
+            <h4 class="workflow-presets-title">🎭 מצבי תצוגה מהירים</h4>
+
+            <button class="workflow-preset-btn" data-preset="wireframe">
+                🏗️ שלד בלבד
+                <span class="preset-layers">שכבה 1</span>
+            </button>
+
+            <button class="workflow-preset-btn" data-preset="blackwhite">
+                📝 שחור-לבן
+                <span class="preset-layers">שכבות 1+2</span>
+            </button>
+
+            <button class="workflow-preset-btn" data-preset="colored">
+                🎨 צבעוני
+                <span class="preset-layers">שכבות 1+2+3</span>
+            </button>
+
+            <button class="workflow-preset-btn" data-preset="full">
+                ✨ מלא
+                <span class="preset-layers">שכבות 1+2+3+4</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <!-- הקלף עם כל 4 השכבות -->
+        <div class="parasha-card" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+
+            <!-- 1. כותרת חומש -->
+            <div class="header" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <div class="book-name">📕 חומש בראשית</div>
+            </div>
+
+            <!-- 2. כותרת פרשה -->
+            <div class="parasha-title" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <h1 class="parasha-name">בְּרֵאשִׁית</h1>
+                <div class="parasha-english">Bereshit · Genesis</div>
+                <div class="parasha-number">🔢 פרשה 1 מתוך 54</div>
+            </div>
+
+            <!-- 3. נושא מרכזי -->
+            <div class="theme-box" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                🌍 בְּרִיאָה
+            </div>
+
+            <!-- 4. נקודות מפנה -->
+            <div class="section" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <h3 class="section-title">
+                    <span class="icon">🔸</span>
+                    נקודות מפנה מרכזיות
+                </h3>
+                <div class="turning-point">🌌 בריאת העולם בששת ימי הבריאה</div>
+                <div class="turning-point">🌳 גן עדן - האדם וחוה</div>
+                <div class="turning-point">🍎 חטא עץ הדעת - גירוש מגן עדן</div>
+                <div class="turning-point">⚔️ קין והבל - הרצח הראשון</div>
+            </div>
+
+            <!-- 5. ציר זמן -->
+            <div class="section" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <h3 class="section-title">
+                    <span class="icon">🕰️</span>
+                    ציר זמן מרכזי
+                </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div>תוהו ובוהו - אין בריאה</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div>ששת ימי בריאה - יש מאין</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div>גן עדן - מצב אידיאלי</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div>החטא והגירוש - תחילת ההיסטוריה</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. עקרונות -->
+            <div class="section" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <h3 class="section-title">
+                    <span class="icon">📜</span>
+                    עקרונות נלמדים
+                </h3>
+                <div class="teaching">✨ הכל נברא בדיבור - כוח המילה</div>
+                <div class="teaching">⚖️ בחירה חופשית - יסוד האחריות האנושית</div>
+                <div class="teaching">🌱 האדם שותף לבורא בעבודת העולם</div>
+                <div class="teaching">💔 החטא הראשון - תחילת התיקון</div>
+            </div>
+
+            <!-- 7. ערכים -->
+            <div class="section" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <h3 class="section-title">
+                    <span class="icon">🌿</span>
+                    ערכים ומידות
+                </h3>
+                <div class="values-container">
+                    <div class="value-badge">✨ אמונה בבורא</div>
+                    <div class="value-badge">🌱 התחלות חדשות</div>
+                    <div class="value-badge">⚖️ בחירה חופשית</div>
+                    <div class="value-badge">🙏 אחריות</div>
+                    <div class="value-badge">🌍 שמירת הבריאה</div>
+                </div>
+            </div>
+
+            <!-- 8. דירוג -->
+            <div class="rating-section" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                <div class="category-badge">📕 בראשית</div>
+                <div class="stars">✡️✡️✡️✡️✡️✡️</div>
+            </div>
+
+            <!-- 9. פסוק -->
+            <div class="verse-quote" data-layer-wireframe data-layer-content data-layer-colors data-layer-effects>
+                "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ"
+                <div class="verse-reference">בראשית א׳, א׳</div>
+            </div>
+
+            <!-- זוהר מסתובב (שכבת אפקטים בלבד) -->
+            <div class="effects-rotating-glow" data-layer-effects></div>
+        </div>
+    </div>
+
+    <script>
+        // פתיחה/סגירה של פאנל
+        const workflowToggle = document.getElementById('workflowToggle');
+        const workflowPanel = document.getElementById('workflowPanel');
+        const workflowClose = document.getElementById('workflowClose');
+
+        workflowToggle.addEventListener('click', () => {
+            workflowPanel.classList.remove('collapsed');
+            workflowToggle.classList.add('panel-open');
+        });
+
+        workflowClose.addEventListener('click', () => {
+            workflowPanel.classList.add('collapsed');
+            workflowToggle.classList.remove('panel-open');
+        });
+
+        // מצב שכבות
+        const workflowStates = {
+            wireframe: true,
+            content: true,
+            colors: true,
+            effects: true
+        };
+
+        // פונקציה להחלפת מצב שכבה
+        function toggleWorkflowLayer(layerName, toggle) {
+            const elements = document.querySelectorAll(`[data-layer-${layerName}]`);
+
+            if (toggle.classList.contains('active')) {
+                toggle.classList.remove('active');
+                elements.forEach(el => el.classList.add('layer-hidden'));
+                workflowStates[layerName] = false;
+            } else {
+                toggle.classList.add('active');
+                elements.forEach(el => el.classList.remove('layer-hidden'));
+                workflowStates[layerName] = true;
+            }
+
+            updateBodyClasses();
+        }
+
+        // עדכון classes על body
+        function updateBodyClasses() {
+            document.body.classList.remove('wireframe-only', 'blackwhite-mode', 'no-colors', 'no-effects');
+
+            if (workflowStates.wireframe && !workflowStates.content) {
+                document.body.classList.add('wireframe-only');
+            }
+            if (!workflowStates.colors) {
+                document.body.classList.add('no-colors');
+            }
+            if (!workflowStates.effects) {
+                document.body.classList.add('no-effects');
+            }
+        }
+
+        // מאזינים למתגים
+        const workflowToggles = document.querySelectorAll('.workflow-toggle');
+        workflowToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const layerName = toggle.getAttribute('data-workflow-layer');
+                toggleWorkflowLayer(layerName, toggle);
+            });
+        });
+
+        // Presets
+        const presetButtons = document.querySelectorAll('.workflow-preset-btn');
+        presetButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const preset = btn.getAttribute('data-preset');
+                applyWorkflowPreset(preset);
+            });
+        });
+
+        function applyWorkflowPreset(preset) {
+            const presets = {
+                'wireframe': {
+                    wireframe: true,
+                    content: false,
+                    colors: false,
+                    effects: false
+                },
+                'blackwhite': {
+                    wireframe: true,
+                    content: true,
+                    colors: false,
+                    effects: false
+                },
+                'colored': {
+                    wireframe: true,
+                    content: true,
+                    colors: true,
+                    effects: false
+                },
+                'full': {
+                    wireframe: true,
+                    content: true,
+                    colors: true,
+                    effects: true
+                }
+            };
+
+            const config = presets[preset];
+            if (!config) return;
+
+            // החלת המצב
+            Object.keys(config).forEach(layerName => {
+                const toggle = document.querySelector(`[data-workflow-layer="${layerName}"]`);
+                const elements = document.querySelectorAll(`[data-layer-${layerName}]`);
+
+                if (toggle) {
+                    workflowStates[layerName] = config[layerName];
+
+                    if (config[layerName]) {
+                        toggle.classList.add('active');
+                        elements.forEach(el => el.classList.remove('layer-hidden'));
+                    } else {
+                        toggle.classList.remove('active');
+                        elements.forEach(el => el.classList.add('layer-hidden'));
+                    }
+                }
+            });
+
+            updateBodyClasses();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,787 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי פרשות השבוע
+   Torah Portions Cards Styles
+   ======================================== */
+
+.torah-card {
+  font-family: "Heebo", "Frank Ruhl Libre", Georgia, serif;
+  width: 350px;
+  height: 530px;
+}
+
+/* רקעים לפי חומשים */
+.genesis-bg {
+  background: linear-gradient(
+    135deg,
+    #8b4513 0%,
+    #a0522d 25%,
+    #d2691e 50%,
+    #a0522d 75%,
+    #8b4513 100%
+  );
+}
+
+.exodus-bg {
+  background: linear-gradient(
+    135deg,
+    #4169e1 0%,
+    #1e90ff 25%,
+    #87ceeb 50%,
+    #1e90ff 75%,
+    #4169e1 100%
+  );
+}
+
+.leviticus-bg {
+  background: linear-gradient(
+    135deg,
+    #dc143c 0%,
+    #ff6347 25%,
+    #ff8c00 50%,
+    #ff6347 75%,
+    #dc143c 100%
+  );
+}
+
+.numbers-bg {
+  background: linear-gradient(
+    135deg,
+    #f4a460 0%,
+    #daa520 25%,
+    #b8860b 50%,
+    #daa520 75%,
+    #f4a460 100%
+  );
+}
+
+.deuteronomy-bg {
+  background: linear-gradient(
+    135deg,
+    #9370db 0%,
+    #8b5cf6 25%,
+    #a855f7 50%,
+    #8b5cf6 75%,
+    #9370db 100%
+  );
+}
+
+/* תבנית אותיות עבריות */
+.hebrew-letters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='40' font-size='60' fill='%23ffffff' opacity='0.03' font-family='serif'%3Eא%3C/text%3E%3Ctext x='50' y='80' font-size='50' fill='%23ffffff' opacity='0.02' font-family='serif'%3Eב%3C/text%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: 1;
+  animation: hebrewFloat 20s linear infinite;
+}
+
+@keyframes hebrewFloat {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* תוכן */
+.torah-content {
+  position: relative;
+  z-index: 3;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* כותרת */
+.torah-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.book-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #fff8dc);
+  color: #000;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+}
+
+.book-badge.genesis {
+  background: linear-gradient(135deg, #d2691e, #f4a460);
+}
+
+.book-badge.exodus {
+  background: linear-gradient(135deg, #4169e1, #87ceeb);
+}
+
+.book-badge.leviticus {
+  background: linear-gradient(135deg, #dc143c, #ff8c00);
+}
+
+.book-badge.numbers {
+  background: linear-gradient(135deg, #daa520, #f4a460);
+}
+
+.book-badge.deuteronomy {
+  background: linear-gradient(135deg, #9370db, #a855f7);
+}
+
+.torah-name {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0 4px 10px rgba(255, 215, 0, 0.6);
+  margin: 5px 0;
+}
+
+.torah-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* אזור תמונה */
+.torah-artwork {
+  position: relative;
+  background: #000;
+  border: 3px solid rgba(255, 215, 0, 0.9);
+  border-radius: 12px;
+  height: 270px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.portion-number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #ffd700;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.portion-number .number {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #ffd700;
+  line-height: 1;
+}
+
+.portion-number .label {
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.torah-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  position: relative;
+}
+
+.torah-text {
+  font-size: 2rem;
+  color: #ffd700;
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  position: relative;
+  font-weight: bold;
+}
+
+.chapters-info {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.chapter-range {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.7);
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* אאורות */
+.creation-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 215, 0, 0.3) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    transparent 70%
+  );
+  animation: creationPulse 4s ease-in-out infinite;
+}
+
+@keyframes creationPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.flood-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(135, 206, 235, 0.4) 0%,
+    rgba(30, 144, 255, 0.3) 40%,
+    transparent 70%
+  );
+  animation: floodWave 5s ease-in-out infinite;
+}
+
+@keyframes floodWave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.journey-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 215, 0, 0.4) 0%,
+    rgba(255, 165, 0, 0.3) 40%,
+    transparent 70%
+  );
+  animation: journeyGlow 3s ease-in-out infinite;
+}
+
+@keyframes journeyGlow {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.exodus-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 69, 0, 0.4) 0%,
+    rgba(255, 140, 0, 0.3) 40%,
+    transparent 70%
+  );
+  animation: burningBush 3s ease-in-out infinite;
+}
+
+@keyframes burningBush {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.sea-split-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(65, 105, 225, 0.4) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(65, 105, 225, 0.4) 100%
+  );
+  animation: seaSplit 4s ease-in-out infinite;
+}
+
+@keyframes seaSplit {
+  0%,
+  100% {
+    background: linear-gradient(
+      90deg,
+      rgba(65, 105, 225, 0.4) 0%,
+      transparent 40%,
+      transparent 60%,
+      rgba(65, 105, 225, 0.4) 100%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      90deg,
+      rgba(65, 105, 225, 0.6) 0%,
+      transparent 45%,
+      transparent 55%,
+      rgba(65, 105, 225, 0.6) 100%
+    );
+  }
+}
+
+.sinai-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 215, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0.3) 30%,
+    transparent 60%
+  );
+  animation: sinaiThunder 2s ease-in-out infinite;
+}
+
+@keyframes sinaiThunder {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.sacrifice-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(220, 20, 60, 0.3) 0%,
+    rgba(255, 140, 0, 0.2) 40%,
+    transparent 70%
+  );
+  animation: sacrificeFlame 3s ease-in-out infinite;
+}
+
+@keyframes sacrificeFlame {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.holiness-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 215, 0, 0.3) 40%,
+    transparent 70%
+  );
+  animation: holinessShine 4s ease-in-out infinite;
+}
+
+@keyframes holinessShine {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.desert-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(244, 164, 96, 0.4) 0%,
+    rgba(218, 165, 32, 0.3) 40%,
+    transparent 70%
+  );
+  animation: desertHeat 5s ease-in-out infinite;
+}
+
+@keyframes desertHeat {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.words-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(147, 112, 219, 0.4) 0%,
+    rgba(168, 85, 247, 0.3) 40%,
+    transparent 70%
+  );
+  animation: wordsFlow 4s ease-in-out infinite;
+}
+
+@keyframes wordsFlow {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.song-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(147, 112, 219, 0.5) 0%,
+    rgba(168, 85, 247, 0.3) 30%,
+    rgba(255, 215, 0, 0.2) 60%,
+    transparent 80%
+  );
+  animation: songWaves 3s ease-in-out infinite;
+}
+
+@keyframes songWaves {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.blessing-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 215, 0, 0.5) 0%,
+    rgba(147, 112, 219, 0.3) 40%,
+    transparent 70%
+  );
+  animation: blessingShine 3s ease-in-out infinite;
+}
+
+@keyframes blessingShine {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg) scale(1.05);
+  }
+}
+
+.connection-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 182, 193, 0.4) 0%,
+    rgba(221, 160, 221, 0.3) 40%,
+    transparent 70%
+  );
+  animation: connectionPulse 3s ease-in-out infinite;
+}
+
+@keyframes connectionPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* מידע */
+.torah-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.themes-section h3,
+.values-section h3 {
+  color: #ffd700;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.theme-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.theme-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border-right: 3px solid #ffd700;
+}
+
+.value-icon {
+  font-size: 1rem;
+}
+
+.value-text {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* תחתית */
+.torah-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.portion-code {
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.book-icon {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid;
+}
+
+.book-icon.genesis {
+  color: #d2691e;
+  border-color: #d2691e;
+}
+
+.book-icon.exodus {
+  color: #4169e1;
+  border-color: #4169e1;
+}
+
+.book-icon.leviticus {
+  color: #dc143c;
+  border-color: #dc143c;
+}
+
+.book-icon.numbers {
+  color: #daa520;
+  border-color: #daa520;
+}
+
+.book-icon.deuteronomy {
+  color: #9370db;
+  border-color: #9370db;
+}
+
+.stars {
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+}
+
+.stars.mythic {
+  animation: starsShine 2s ease-in-out infinite;
+}
+
+@keyframes starsShine {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+  }
+}
+
+/* זוהרים לפי חומשים */
+.genesis-glow {
+  box-shadow: 0 0 40px rgba(210, 105, 30, 0.9),
+    0 0 50px rgba(160, 82, 45, 0.7), inset 0 0 40px rgba(139, 69, 19, 0.5);
+  animation: genesisGlow 3s ease-in-out infinite;
+}
+
+@keyframes genesisGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(210, 105, 30, 0.9),
+      0 0 50px rgba(160, 82, 45, 0.7), inset 0 0 40px rgba(139, 69, 19, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(210, 105, 30, 1),
+      0 0 70px rgba(160, 82, 45, 1), inset 0 0 60px rgba(139, 69, 19, 0.8);
+  }
+}
+
+.exodus-glow {
+  box-shadow: 0 0 40px rgba(65, 105, 225, 0.9), 0 0 50px rgba(30, 144, 255, 0.7),
+    inset 0 0 40px rgba(135, 206, 235, 0.5);
+  animation: exodusGlow 3s ease-in-out infinite;
+}
+
+@keyframes exodusGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(65, 105, 225, 0.9),
+      0 0 50px rgba(30, 144, 255, 0.7), inset 0 0 40px rgba(135, 206, 235, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(65, 105, 225, 1), 0 0 70px rgba(30, 144, 255, 1),
+      inset 0 0 60px rgba(135, 206, 235, 0.8);
+  }
+}
+
+.leviticus-glow {
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.9), 0 0 50px rgba(255, 99, 71, 0.7),
+    0 0 60px rgba(255, 140, 0, 0.5), inset 0 0 40px rgba(139, 0, 0, 0.5);
+  animation: leviticusGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes leviticusGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(220, 20, 60, 0.9),
+      0 0 50px rgba(255, 99, 71, 0.7), 0 0 60px rgba(255, 140, 0, 0.5),
+      inset 0 0 40px rgba(139, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(220, 20, 60, 1), 0 0 70px rgba(255, 99, 71, 1),
+      0 0 80px rgba(255, 140, 0, 0.8), inset 0 0 60px rgba(139, 0, 0, 0.8);
+  }
+}
+
+.numbers-glow {
+  box-shadow: 0 0 40px rgba(244, 164, 96, 0.9),
+    0 0 50px rgba(218, 165, 32, 0.7), inset 0 0 40px rgba(184, 134, 11, 0.5);
+  animation: numbersGlow 3s ease-in-out infinite;
+}
+
+@keyframes numbersGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(244, 164, 96, 0.9),
+      0 0 50px rgba(218, 165, 32, 0.7), inset 0 0 40px rgba(184, 134, 11, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(244, 164, 96, 1),
+      0 0 70px rgba(218, 165, 32, 1), inset 0 0 60px rgba(184, 134, 11, 0.8);
+  }
+}
+
+.deuteronomy-glow {
+  box-shadow: 0 0 40px rgba(147, 112, 219, 0.9),
+    0 0 50px rgba(139, 92, 246, 0.7), inset 0 0 40px rgba(168, 85, 247, 0.5);
+  animation: deuteronomyGlow 3s ease-in-out infinite;
+}
+
+@keyframes deuteronomyGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(147, 112, 219, 0.9),
+      0 0 50px rgba(139, 92, 246, 0.7), inset 0 0 40px rgba(168, 85, 247, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(147, 112, 219, 1),
+      0 0 70px rgba(139, 92, 246, 1), inset 0 0 60px rgba(168, 85, 247, 0.8);
+  }
+}
+
+/* מידע נוסף */
+.torah-info {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.05),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+

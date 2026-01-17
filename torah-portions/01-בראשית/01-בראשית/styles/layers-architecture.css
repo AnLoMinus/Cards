@@ -1,0 +1,73 @@
+/* ארכיטקטורת שכבות - כמו פוטושופ */
+
+/* שכבה 1: מסגרת בסיסית - Frame Layer */
+.layer-frame {
+  position: relative;
+}
+
+.layer-frame.layer-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* שכבה 2: רקע צבעוני - Background Layer */
+.layer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.layer-background.layer-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* שכבה 3: גרדיאנט - Gradient Layer */
+.layer-gradient {
+  position: relative;
+  z-index: 1;
+}
+
+.layer-gradient.layer-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* שכבה 4: זוהר חיצוני - Border Glow Layer */
+.layer-borders {
+  z-index: -1;
+}
+
+.layer-borders.layer-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* שכבה 5-13: שכבות טקסט */
+.layer-text {
+  position: relative;
+  z-index: 10;
+}
+
+.layer-text.layer-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* אפקט מעבר חלק */
+.layer-frame,
+.layer-background,
+.layer-gradient,
+.layer-borders,
+.layer-text {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+/* הסתרה עם שמירת מקום */
+.layer-off {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}

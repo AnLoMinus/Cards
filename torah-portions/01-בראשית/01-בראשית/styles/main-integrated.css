@@ -1,0 +1,161 @@
+/* ========================================
+   CSS ראשי משולב - כל 4 השכבות ביחד
+   ======================================== */
+
+/* ייבוא כל השכבות */
+@import url('layer-1-wireframe.css');
+@import url('layer-2-content.css');
+@import url('layer-3-colors.css');
+@import url('layer-4-effects.css');
+
+/* ========================================
+   שילוב השכבות על האלמנטים
+   ======================================== */
+
+/* הכרטיס המלא */
+.parasha-card {
+    /* שכבה 1: שלד */
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    
+    /* שכבה 3: צבעים */
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #d2691e 100%);
+    
+    /* שכבה 4: אפקטים */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(210, 105, 30, 0.3);
+}
+
+/* כותרת */
+.header {
+    /* שכבה 1: שלד */
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    /* שכבה 3: צבעים */
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #2c1810;
+    
+    /* שכבה 4: אפקטים */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* שם הפרשה */
+.parasha-title {
+    /* שכבה 1: שלד */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    
+    /* שכבה 3: צבעים */
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    
+    /* שכבה 4: אפקטים */
+    backdrop-filter: blur(10px);
+}
+
+.parasha-name {
+    /* שכבה 2: תוכן */
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    
+    /* שכבה 3: צבעים */
+    color: #ffd700;
+    
+    /* שכבה 4: אפקטים */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* תיבת נושא */
+.theme-box {
+    /* שכבה 1: שלד */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    /* שכבה 2: תוכן */
+    font-size: 2rem;
+    font-weight: 900;
+    
+    /* שכבה 3: צבעים */
+    background: linear-gradient(135deg, #ffd700, #ff6b6b);
+    color: #2c1810;
+    
+    /* שכבה 4: אפקטים */
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* סקציות */
+.section {
+    /* שכבה 1: שלד */
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    
+    /* שכבה 3: צבעים */
+    background: rgba(255, 255, 255, 0.08);
+    border-right: 4px solid #ffd700;
+    
+    /* שכבה 4: אפקטים */
+    backdrop-filter: blur(5px);
+}
+
+/* תגיות ערכים */
+.value-badge {
+    /* שכבה 1: שלד */
+    padding: 8px 16px;
+    border-radius: 20px;
+    
+    /* שכבה 2: תוכן */
+    font-weight: bold;
+    font-size: 0.9rem;
+    
+    /* שכבה 3: צבעים */
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    color: white;
+    
+    /* שכבה 4: אפקטים */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* פסוק */
+.verse-quote {
+    /* שכבה 1: שלד */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    
+    /* שכבה 2: תוכן */
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    font-style: italic;
+    
+    /* שכבה 3: צבעים */
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 107, 0.2));
+    border: 2px solid #ffd700;
+    color: #fff;
+    
+    /* שכבה 4: אפקטים */
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* הסתרת שכבה */
+.colors-layer.layer-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.colors-layer {
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+

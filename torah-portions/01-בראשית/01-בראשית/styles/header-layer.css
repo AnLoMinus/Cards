@@ -1,0 +1,27 @@
+/* שכבת כותרת - Header Layer */
+.header {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #2c1810;
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.header.layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

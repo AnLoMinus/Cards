@@ -1,0 +1,27 @@
+/* שכבת ערכים - Values Layer */
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.value-badge {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.section[data-layer-element="values"].layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section[data-layer-element="values"] {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

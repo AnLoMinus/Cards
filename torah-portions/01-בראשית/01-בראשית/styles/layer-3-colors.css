@@ -1,0 +1,93 @@
+/* ========================================
+   שכבה 3: צבעים - Colors Layer
+   ======================================== */
+
+/* כל הצבעים והגרדיאנטים */
+.colors-layer {
+    position: relative;
+    z-index: 5;
+}
+
+/* צבעי רקע */
+.colors-background {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #d2691e 100%);
+}
+
+/* צבעי טקסט */
+.colors-text-gold {
+    color: #ffd700;
+}
+
+.colors-text-white {
+    color: #fff;
+}
+
+.colors-text-dark {
+    color: #2c1810;
+}
+
+/* גרדיאנטים */
+.colors-gradient-header {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+}
+
+.colors-gradient-theme {
+    background: linear-gradient(135deg, #ffd700, #ff6b6b);
+}
+
+.colors-gradient-badge {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.colors-gradient-category {
+    background: linear-gradient(135deg, #8b4513, #d2691e);
+}
+
+/* צבעי גבול */
+.colors-border-gold {
+    border-color: #ffd700;
+}
+
+.colors-border-teal {
+    border-color: #4ecdc4;
+}
+
+.colors-border-red {
+    border-color: #ff6b6b;
+}
+
+/* רקעים שקופים */
+.colors-bg-overlay {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.colors-bg-dark {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* הסתרת שכבה */
+.colors-layer.layer-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.colors-layer {
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+/* כאשר שכבת הצבעים כבויה - חזור לשחור-לבן */
+body.no-colors .parasha-card {
+    background: #fff !important;
+}
+
+body.no-colors * {
+    color: #000 !important;
+    background: #fff !important;
+    border-color: #000 !important;
+}
+
+body.no-colors .content-badge {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+}
+

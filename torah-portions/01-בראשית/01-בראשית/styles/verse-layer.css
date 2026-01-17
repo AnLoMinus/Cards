@@ -1,0 +1,35 @@
+/* שכבת פסוק - Verse Layer */
+.verse-quote {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 107, 107, 0.2)
+  );
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.verse-reference {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.verse-quote.layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.verse-quote {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

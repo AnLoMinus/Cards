@@ -1,0 +1,32 @@
+/* שכבת זוהר - Glow Layer */
+.card-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4, #ffd700);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* כיבוי שכבה - הסתרה עם שמירת מקום */
+.card-glow.layer-off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card-glow {
+  transition: visibility 0.3s, opacity 0.3s ease;
+}

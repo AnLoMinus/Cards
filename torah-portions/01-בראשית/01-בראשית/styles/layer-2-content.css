@@ -1,0 +1,73 @@
+/* ========================================
+   שכבה 2: תוכן - Content Layer
+   ======================================== */
+
+/* כל התכנים הטקסטואליים - עדיין שחור לבן */
+.content-layer {
+    position: relative;
+    z-index: 10;
+}
+
+/* טקסטים בסיסיים */
+.content-text {
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* כותרת ראשית */
+.content-main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* כותרת משנה */
+.content-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* תיאור */
+.content-description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* רשימות */
+.content-list-item {
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+/* תגיות */
+.content-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 5px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+/* הסתרת שכבה */
+.content-layer.layer-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content-layer {
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+/* מצב שחור-לבן - רק שלד + תוכן */
+body.blackwhite-mode .content-text {
+    color: #000 !important;
+}
+
+body.blackwhite-mode {
+    background: #f5f5f5 !important;
+}
+
