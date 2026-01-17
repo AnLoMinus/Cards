@@ -1,0 +1,1333 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי Marvel
+   ======================================== */
+
+.marvel-card {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 350px;
+  height: 510px;
+}
+
+/* רקעים לפי סגנון */
+.marvel-tech {
+  background: linear-gradient(
+    135deg,
+    #c41e3a 0%,
+    #8b0000 25%,
+    #4a0000 50%,
+    #8b0000 75%,
+    #c41e3a 100%
+  );
+}
+
+.marvel-shield {
+  background: linear-gradient(135deg, #003d82 0%, #002d5c 50%, #001a36 100%);
+}
+
+.marvel-cosmic {
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(138, 43, 226, 0.4) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(255, 20, 147, 0.3) 0%,
+      transparent 50%
+    ),
+    linear-gradient(135deg, #1a0033 0%, #0d001a 50%, #000000 100%);
+}
+
+.marvel-spider {
+  background: linear-gradient(135deg, #dc143c 0%, #c41e3a 50%, #8b0000 100%);
+}
+
+.marvel-gamma {
+  background: linear-gradient(135deg, #32cd32 0%, #228b22 50%, #006400 100%);
+}
+
+.marvel-spy {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #000000 100%);
+}
+
+.marvel-wakanda {
+  background: linear-gradient(135deg, #663399 0%, #4b0082 50%, #2e0854 100%);
+}
+
+.marvel-chaos {
+  background: linear-gradient(
+    135deg,
+    #dc143c 0%,
+    #8b0000 25%,
+    #4b0082 50%,
+    #663399 75%,
+    #dc143c 100%
+  );
+}
+
+.marvel-mystic {
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ff8c00 25%,
+    #ff4500 50%,
+    #8b0000 75%,
+    #4b0082 100%
+  );
+}
+
+.marvel-trickster {
+  background: linear-gradient(135deg, #228b22 0%, #006400 50%, #003300 100%);
+}
+
+.marvel-asgard {
+  background: linear-gradient(135deg, #ffd700 0%, #daa520 50%, #b8860b 100%);
+}
+
+.marvel-synthetic {
+  background: linear-gradient(
+    135deg,
+    #daa520 0%,
+    #b8860b 25%,
+    #ffd700 50%,
+    #8b7500 75%,
+    #daa520 100%
+  );
+}
+
+.marvel-galaxy {
+  background: linear-gradient(
+    135deg,
+    #4b0082 0%,
+    #9370db 25%,
+    #663399 50%,
+    #8a2be2 75%,
+    #4b0082 100%
+  );
+}
+
+.marvel-nature {
+  background: linear-gradient(135deg, #228b22 0%, #32cd32 50%, #006400 100%);
+}
+
+.marvel-quantum {
+  background: linear-gradient(135deg, #ff6347 0%, #dc143c 50%, #8b0000 100%);
+}
+
+.marvel-ai {
+  background: linear-gradient(135deg, #708090 0%, #483d8b 50%, #2f4f4f 100%);
+}
+
+.marvel-winter {
+  background: linear-gradient(135deg, #4682b4 0%, #2f4f4f 50%, #191970 100%);
+}
+
+.marvel-death {
+  background: linear-gradient(
+    135deg,
+    #006400 0%,
+    #2f4f4f 25%,
+    #000000 50%,
+    #2f4f4f 75%,
+    #006400 100%
+  );
+}
+
+.marvel-binary {
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #ff8c00 25%,
+    #ff6347 50%,
+    #dc143c 75%,
+    #ffd700 100%
+  );
+}
+
+.marvel-hydra {
+  background: linear-gradient(135deg, #228b22 0%, #006400 50%, #2f4f4f 100%);
+}
+
+.marvel-killmonger {
+  background: linear-gradient(135deg, #daa520 0%, #b8860b 50%, #8b6914 100%);
+}
+
+.marvel-destroyer {
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 50%, #a0522d 100%);
+}
+
+.marvel-dark {
+  background: linear-gradient(135deg, #2f4f4f 0%, #1c1c1c 50%, #000000 100%);
+}
+
+.marvel-xmen {
+  background: linear-gradient(
+    135deg,
+    #ffd700 0%,
+    #4169e1 25%,
+    #000080 50%,
+    #4169e1 75%,
+    #ffd700 100%
+  );
+}
+
+.marvel-symbiote {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a1a1a 25%,
+    #000000 50%,
+    #0a0a0a 75%,
+    #000000 100%
+  );
+}
+
+.marvel-hellfire {
+  background: linear-gradient(
+    135deg,
+    #ff4500 0%,
+    #ff6347 25%,
+    #8b0000 50%,
+    #ff6347 75%,
+    #ff4500 100%
+  );
+}
+
+.marvel-weather {
+  background: linear-gradient(
+    135deg,
+    #00bfff 0%,
+    #1e90ff 25%,
+    #4682b4 50%,
+    #1e90ff 75%,
+    #87ceeb 100%
+  );
+}
+
+.marvel-optic {
+  background: linear-gradient(135deg, #dc143c 0%, #ff0000 50%, #8b0000 100%);
+}
+
+.marvel-phoenix {
+  background: linear-gradient(
+    135deg,
+    #ff4500 0%,
+    #ffa500 25%,
+    #ffd700 50%,
+    #ffa500 75%,
+    #ff4500 100%
+  );
+}
+
+.marvel-magnetic {
+  background: linear-gradient(
+    135deg,
+    #4b0082 0%,
+    #663399 25%,
+    #8b008b 50%,
+    #663399 75%,
+    #4b0082 100%
+  );
+}
+
+.marvel-speed {
+  background: linear-gradient(
+    135deg,
+    #87ceeb 0%,
+    #00bfff 25%,
+    #1e90ff 50%,
+    #00bfff 75%,
+    #87ceeb 100%
+  );
+}
+
+/* אבני אינסוף */
+.stone-power {
+  background: radial-gradient(
+    circle at center,
+    #9370db 0%,
+    #663399 50%,
+    #4b0082 100%
+  );
+}
+
+.stone-space {
+  background: radial-gradient(
+    circle at center,
+    #4169e1 0%,
+    #0047ab 50%,
+    #002366 100%
+  );
+}
+
+.stone-time {
+  background: radial-gradient(
+    circle at center,
+    #32cd32 0%,
+    #228b22 50%,
+    #006400 100%
+  );
+}
+
+.stone-mind {
+  background: radial-gradient(
+    circle at center,
+    #ffd700 0%,
+    #ffaa00 50%,
+    #ff8800 100%
+  );
+}
+
+.stone-reality {
+  background: radial-gradient(
+    circle at center,
+    #dc143c 0%,
+    #8b0000 50%,
+    #4a0000 100%
+  );
+}
+
+.stone-soul {
+  background: radial-gradient(
+    circle at center,
+    #ff8c00 0%,
+    #ff6347 50%,
+    #dc143c 100%
+  );
+}
+
+/* אבני אינסוף נוספות - זוהרים */
+.stone-glow-mind {
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.9),
+    inset 0 0 40px rgba(255, 170, 0, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+.stone-glow-reality {
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.9),
+    inset 0 0 40px rgba(139, 0, 0, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+.stone-glow-soul {
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.9),
+    inset 0 0 40px rgba(255, 99, 71, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+/* תבניות ייחודיות */
+.tech-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 215, 0, 0.03) 2px,
+      rgba(255, 215, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 215, 0, 0.03) 2px,
+      rgba(255, 215, 0, 0.03) 4px
+    );
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+  animation: techScan 3s linear infinite;
+}
+
+@keyframes techScan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+.web-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 30%
+    ),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      transparent 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 2px,
+      transparent 20px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* תוכן */
+.marvel-content {
+  position: relative;
+  z-index: 3;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* כותרת */
+.marvel-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #ff6b35);
+  color: #000;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+  animation: badgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+  0%,
+  100% {
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.hero-badge.legendary {
+  background: linear-gradient(135deg, #ff6b35, #ffd700, #ff6b9d);
+  background-size: 200% 200%;
+  color: #fff;
+  animation: legendaryBadge 3s ease infinite, badgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes legendaryBadge {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-badge.epic {
+  background: linear-gradient(135deg, #9370db, #8b5cf6);
+  color: #fff;
+}
+
+.hero-badge.rare {
+  background: linear-gradient(135deg, #4169e1, #1e90ff);
+  color: #fff;
+}
+
+.villain-badge {
+  background: linear-gradient(135deg, #dc143c, #8b0000, #2e0854) !important;
+  color: #fff !important;
+}
+
+.marvel-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0 4px 10px rgba(255, 215, 0, 0.5);
+  margin: 5px 0;
+}
+
+.villain-name {
+  text-shadow: 3px 3px 0 #8b0000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0 4px 15px rgba(220, 20, 60, 0.8);
+}
+
+.hero-title {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.villain-title {
+  color: #dc143c;
+}
+
+/* אזור תמונה */
+.marvel-artwork {
+  position: relative;
+  background: #000;
+  border: 3px solid rgba(255, 215, 0, 0.8);
+  border-radius: 15px;
+  height: 250px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.villain-art {
+  border-color: rgba(220, 20, 60, 0.8);
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+}
+
+.power-stats {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.villain-stats {
+  filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.8));
+}
+
+.stat {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ffd700;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-icon {
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffd700;
+}
+
+.marvel-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  position: relative;
+}
+
+.infinity-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(138, 43, 226, 0.3) 0%,
+    rgba(255, 20, 147, 0.2) 30%,
+    transparent 60%
+  );
+  animation: infinityPulse 3s ease-in-out infinite;
+}
+
+@keyframes infinityPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.mystic-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 140, 0, 0.2) 0%,
+    rgba(255, 69, 0, 0.2) 30%,
+    rgba(139, 0, 0, 0.1) 60%,
+    transparent 80%
+  );
+  animation: mysticWave 4s ease-in-out infinite;
+}
+
+@keyframes mysticWave {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+}
+
+.team-affiliation {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
+.team-badge {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #ffd700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #ffd700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.team-badge.avengers {
+  border-color: #c41e3a;
+  color: #c41e3a;
+}
+
+.team-badge.shield {
+  border-color: #003d82;
+  color: #003d82;
+}
+
+.team-badge.wakanda {
+  border-color: #663399;
+  color: #663399;
+}
+
+.team-badge.mystic {
+  border-color: #ff8c00;
+  color: #ff8c00;
+}
+
+.team-badge.asgard {
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.team-badge.villain {
+  border-color: #dc143c;
+  color: #dc143c;
+}
+
+.team-badge.guardians {
+  border-color: #9370db;
+  color: #9370db;
+}
+
+.team-badge.xmen {
+  border-color: #4169e1;
+  color: #4169e1;
+}
+
+/* אאורות מיוחדות */
+.hellfire-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 69, 0, 0.4) 0%,
+    rgba(255, 99, 71, 0.3) 30%,
+    rgba(139, 0, 0, 0.2) 60%,
+    transparent 80%
+  );
+  animation: hellfireWave 3s ease-in-out infinite;
+}
+
+@keyframes hellfireWave {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.15) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+.phoenix-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 69, 0, 0.5) 0%,
+    rgba(255, 165, 0, 0.4) 30%,
+    rgba(255, 215, 0, 0.2) 60%,
+    transparent 80%
+  );
+  animation: phoenixRise 4s ease-in-out infinite;
+}
+
+@keyframes phoenixRise {
+  0%,
+  100% {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* מידע */
+.marvel-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.abilities-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.marvel-ability {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border-right: 3px solid #ffd700;
+}
+
+.legendary-ability {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 107, 53, 0.1)
+  );
+  border-right-color: #ff6b35;
+}
+
+.villain-ability {
+  background: rgba(220, 20, 60, 0.15);
+  border-right-color: #dc143c;
+}
+
+.marvel-ability h3 {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.villain-ability h3 {
+  color: #dc143c;
+}
+
+.legendary-ability h3 {
+  color: #ff6b35;
+}
+
+.marvel-ability p {
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.marvel-ability strong {
+  color: #4fc3f7;
+}
+
+.powers-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.power-tag {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.villain-tag {
+  border-color: rgba(220, 20, 60, 0.5);
+  color: #dc143c;
+}
+
+/* תחתית */
+.marvel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.card-number {
+  color: #fff;
+  font-size: 0.7rem;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.universe-icon {
+  color: #ffd700;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.rarity-symbol {
+  font-size: 0.9rem;
+  color: #ffd700;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.8));
+}
+
+.rarity-symbol.legendary {
+  color: #ff6b35;
+  animation: legendaryGlow 2s ease-in-out infinite;
+}
+
+@keyframes legendaryGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 107, 53, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 107, 53, 1));
+  }
+}
+
+.rarity-symbol.mythic {
+  font-size: 1.2rem;
+  animation: mythicShine 3s ease infinite;
+}
+
+@keyframes mythicShine {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 1));
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
+  }
+}
+
+/* אבני אינסוף */
+.stone-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.stone-header {
+  margin-bottom: 15px;
+}
+
+.stone-name {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000, 0 0 20px rgba(255, 215, 0, 0.8);
+  margin-bottom: 5px;
+}
+
+.stone-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+.stone-artwork {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.giant-stone {
+  font-size: 10rem;
+  animation: stoneFloat 3s ease-in-out infinite,
+    stoneGlow 2s ease-in-out infinite;
+}
+
+@keyframes stoneFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+@keyframes stoneGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 30px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 50px currentColor);
+  }
+}
+
+.power-stone {
+  color: #9370db;
+}
+
+.space-stone {
+  color: #4169e1;
+}
+
+.time-stone {
+  color: #32cd32;
+}
+
+.stone-effect {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.stone-effect h3 {
+  color: #ffd700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.stone-effect p {
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.stone-note {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem !important;
+}
+
+/* זוהרים */
+.marvel-glow-tech {
+  box-shadow: 0 0 30px rgba(196, 30, 58, 0.7),
+    inset 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.marvel-glow-shield {
+  box-shadow: 0 0 30px rgba(0, 61, 130, 0.7),
+    inset 0 0 30px rgba(100, 149, 237, 0.3);
+}
+
+.marvel-glow-cosmic {
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 50px rgba(255, 20, 147, 0.6),
+    inset 0 0 40px rgba(138, 43, 226, 0.4);
+  animation: cosmicGlow 3s ease-in-out infinite;
+}
+
+@keyframes cosmicGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.8),
+      0 0 50px rgba(255, 20, 147, 0.6), inset 0 0 40px rgba(138, 43, 226, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(138, 43, 226, 1), 0 0 70px rgba(255, 20, 147, 0.9),
+      inset 0 0 50px rgba(138, 43, 226, 0.6);
+  }
+}
+
+.marvel-glow-spider {
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.7),
+    inset 0 0 30px rgba(139, 0, 0, 0.3);
+}
+
+.marvel-glow-gamma {
+  box-shadow: 0 0 35px rgba(50, 205, 50, 0.8),
+    inset 0 0 35px rgba(34, 139, 34, 0.4);
+  animation: gammaGlow 2s ease-in-out infinite;
+}
+
+@keyframes gammaGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 35px rgba(50, 205, 50, 0.8),
+      inset 0 0 35px rgba(34, 139, 34, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(50, 205, 50, 1),
+      inset 0 0 50px rgba(34, 139, 34, 0.6);
+  }
+}
+
+.marvel-glow-spy {
+  box-shadow: 0 0 25px rgba(44, 44, 44, 0.7),
+    inset 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+.marvel-glow-wakanda {
+  box-shadow: 0 0 35px rgba(102, 51, 153, 0.8),
+    inset 0 0 35px rgba(75, 0, 130, 0.4);
+}
+
+.marvel-glow-chaos {
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.7), 0 0 50px rgba(102, 51, 153, 0.5),
+    inset 0 0 40px rgba(220, 20, 60, 0.3);
+  animation: chaosGlow 3s ease-in-out infinite;
+}
+
+@keyframes chaosGlow {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+}
+
+.marvel-glow-mystic {
+  box-shadow: 0 0 35px rgba(255, 140, 0, 0.8), 0 0 45px rgba(255, 69, 0, 0.6),
+    inset 0 0 35px rgba(139, 0, 0, 0.4);
+}
+
+.marvel-glow-trickster {
+  box-shadow: 0 0 30px rgba(34, 139, 34, 0.7),
+    inset 0 0 30px rgba(0, 100, 0, 0.3);
+}
+
+.marvel-glow-thunder {
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.9),
+    inset 0 0 40px rgba(218, 165, 32, 0.5);
+  animation: thunderGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes thunderGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.9),
+      inset 0 0 40px rgba(218, 165, 32, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 215, 0, 1),
+      inset 0 0 60px rgba(218, 165, 32, 0.7);
+  }
+}
+
+.marvel-glow-synthetic {
+  box-shadow: 0 0 35px rgba(218, 165, 32, 0.8),
+    inset 0 0 35px rgba(255, 215, 0, 0.4);
+}
+
+.marvel-glow-galaxy {
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.8),
+    inset 0 0 40px rgba(147, 112, 219, 0.4);
+}
+
+.marvel-glow-nature {
+  box-shadow: 0 0 30px rgba(34, 139, 34, 0.7),
+    inset 0 0 30px rgba(50, 205, 50, 0.3);
+}
+
+.marvel-glow-quantum {
+  box-shadow: 0 0 35px rgba(255, 99, 71, 0.8),
+    inset 0 0 35px rgba(220, 20, 60, 0.4);
+}
+
+.marvel-glow-ai {
+  box-shadow: 0 0 35px rgba(112, 128, 144, 0.8),
+    inset 0 0 35px rgba(72, 61, 139, 0.4);
+  animation: aiGlow 2s ease-in-out infinite;
+}
+
+@keyframes aiGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 35px rgba(112, 128, 144, 0.8),
+      inset 0 0 35px rgba(72, 61, 139, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(112, 128, 144, 1),
+      inset 0 0 50px rgba(72, 61, 139, 0.6);
+  }
+}
+
+.marvel-glow-winter {
+  box-shadow: 0 0 30px rgba(70, 130, 180, 0.7),
+    inset 0 0 30px rgba(47, 79, 79, 0.3);
+}
+
+.marvel-glow-death {
+  box-shadow: 0 0 40px rgba(0, 100, 0, 0.8), 0 0 50px rgba(47, 79, 79, 0.6),
+    inset 0 0 40px rgba(0, 0, 0, 0.5);
+  animation: deathGlow 3s ease-in-out infinite;
+}
+
+@keyframes deathGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(0, 100, 0, 0.8), 0 0 50px rgba(47, 79, 79, 0.6),
+      inset 0 0 40px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(0, 100, 0, 1), 0 0 70px rgba(47, 79, 79, 0.9),
+      inset 0 0 50px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.marvel-glow-binary {
+  box-shadow: 0 0 45px rgba(255, 215, 0, 0.9), 0 0 55px rgba(255, 140, 0, 0.7),
+    inset 0 0 45px rgba(255, 99, 71, 0.5);
+  animation: binaryGlow 2s ease-in-out infinite;
+}
+
+@keyframes binaryGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.9), 0 0 55px rgba(255, 140, 0, 0.7),
+      inset 0 0 45px rgba(255, 99, 71, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 65px rgba(255, 215, 0, 1), 0 0 75px rgba(255, 140, 0, 1),
+      inset 0 0 60px rgba(255, 99, 71, 0.7);
+  }
+}
+
+.marvel-glow-hydra {
+  box-shadow: 0 0 30px rgba(34, 139, 34, 0.7),
+    inset 0 0 30px rgba(0, 100, 0, 0.3);
+}
+
+.marvel-glow-killmonger {
+  box-shadow: 0 0 35px rgba(218, 165, 32, 0.8),
+    inset 0 0 35px rgba(139, 105, 20, 0.4);
+}
+
+.marvel-glow-destroyer {
+  box-shadow: 0 0 30px rgba(210, 105, 30, 0.7),
+    inset 0 0 30px rgba(139, 69, 19, 0.3);
+}
+
+.marvel-glow-dark {
+  box-shadow: 0 0 25px rgba(47, 79, 79, 0.7), inset 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.marvel-glow-xmen {
+  box-shadow: 0 0 40px rgba(65, 105, 225, 0.9), 0 0 50px rgba(255, 215, 0, 0.6),
+    inset 0 0 40px rgba(65, 105, 225, 0.4);
+  animation: xmenGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes xmenGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(65, 105, 225, 0.9),
+      0 0 50px rgba(255, 215, 0, 0.6), inset 0 0 40px rgba(65, 105, 225, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(65, 105, 225, 1), 0 0 70px rgba(255, 215, 0, 0.9),
+      inset 0 0 60px rgba(65, 105, 225, 0.6);
+  }
+}
+
+.marvel-glow-symbiote {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 50px rgba(26, 26, 26, 0.8),
+    inset 0 0 40px rgba(0, 0, 0, 0.7);
+  animation: symbioteGlow 2s ease-in-out infinite;
+}
+
+@keyframes symbioteGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 50px rgba(26, 26, 26, 0.8),
+      inset 0 0 40px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(0, 0, 0, 1), 0 0 70px rgba(26, 26, 26, 1),
+      inset 0 0 60px rgba(0, 0, 0, 0.9);
+  }
+}
+
+.marvel-glow-hellfire {
+  box-shadow: 0 0 45px rgba(255, 69, 0, 0.9), 0 0 55px rgba(255, 99, 71, 0.8),
+    inset 0 0 45px rgba(139, 0, 0, 0.6);
+  animation: hellfireGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes hellfireGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 45px rgba(255, 69, 0, 0.9), 0 0 55px rgba(255, 99, 71, 0.8),
+      inset 0 0 45px rgba(139, 0, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 65px rgba(255, 69, 0, 1), 0 0 75px rgba(255, 99, 71, 1),
+      inset 0 0 65px rgba(139, 0, 0, 0.9);
+  }
+}
+
+.marvel-glow-weather {
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.8), 0 0 50px rgba(30, 144, 255, 0.6),
+    inset 0 0 40px rgba(70, 130, 180, 0.5);
+  animation: weatherGlow 3s ease-in-out infinite;
+}
+
+@keyframes weatherGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.8),
+      0 0 50px rgba(30, 144, 255, 0.6), inset 0 0 40px rgba(70, 130, 180, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(0, 191, 255, 1), 0 0 70px rgba(30, 144, 255, 0.9),
+      inset 0 0 60px rgba(70, 130, 180, 0.7);
+  }
+}
+
+.marvel-glow-optic {
+  box-shadow: 0 0 35px rgba(220, 20, 60, 0.9), 0 0 45px rgba(255, 0, 0, 0.7),
+    inset 0 0 35px rgba(139, 0, 0, 0.5);
+}
+
+.marvel-glow-phoenix {
+  box-shadow: 0 0 50px rgba(255, 69, 0, 0.9), 0 0 60px rgba(255, 165, 0, 0.8),
+    0 0 70px rgba(255, 215, 0, 0.6), inset 0 0 50px rgba(255, 140, 0, 0.5);
+  animation: phoenixGlow 2s ease-in-out infinite;
+}
+
+@keyframes phoenixGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 50px rgba(255, 69, 0, 0.9), 0 0 60px rgba(255, 165, 0, 0.8),
+      0 0 70px rgba(255, 215, 0, 0.6), inset 0 0 50px rgba(255, 140, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 70px rgba(255, 69, 0, 1), 0 0 80px rgba(255, 165, 0, 1),
+      0 0 90px rgba(255, 215, 0, 0.9), inset 0 0 70px rgba(255, 140, 0, 0.8);
+  }
+}
+
+.marvel-glow-magnetic {
+  box-shadow: 0 0 40px rgba(75, 0, 130, 0.9), 0 0 50px rgba(102, 51, 153, 0.7),
+    inset 0 0 40px rgba(139, 0, 139, 0.5);
+  animation: magneticGlow 2s ease-in-out infinite;
+}
+
+@keyframes magneticGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(75, 0, 130, 0.9), 0 0 50px rgba(102, 51, 153, 0.7),
+      inset 0 0 40px rgba(139, 0, 139, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(75, 0, 130, 1), 0 0 70px rgba(102, 51, 153, 1),
+      inset 0 0 60px rgba(139, 0, 139, 0.8);
+  }
+}
+
+.marvel-glow-speed {
+  box-shadow: 0 0 35px rgba(135, 206, 235, 0.9), 0 0 45px rgba(0, 191, 255, 0.7),
+    inset 0 0 35px rgba(30, 144, 255, 0.5);
+  animation: speedGlow 1.2s ease-in-out infinite;
+}
+
+@keyframes speedGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 35px rgba(135, 206, 235, 0.9),
+      0 0 45px rgba(0, 191, 255, 0.7), inset 0 0 35px rgba(30, 144, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(135, 206, 235, 1), 0 0 65px rgba(0, 191, 255, 1),
+      inset 0 0 55px rgba(30, 144, 255, 0.8);
+  }
+}
+
+/* אבני אינסוף - זוהרים */
+.stone-glow-power {
+  box-shadow: 0 0 40px rgba(147, 112, 219, 0.9),
+    inset 0 0 40px rgba(102, 51, 153, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+.stone-glow-space {
+  box-shadow: 0 0 40px rgba(65, 105, 225, 0.9),
+    inset 0 0 40px rgba(0, 71, 171, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+.stone-glow-time {
+  box-shadow: 0 0 40px rgba(50, 205, 50, 0.9),
+    inset 0 0 40px rgba(34, 139, 34, 0.5);
+  animation: stoneGlowAnim 2s ease-in-out infinite;
+}
+
+@keyframes stoneGlowAnim {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* מידע */
+.marvel-info {
+  background: linear-gradient(
+    135deg,
+    rgba(196, 30, 58, 0.1),
+    rgba(255, 215, 0, 0.1)
+  );
+  border: 2px solid rgba(196, 30, 58, 0.4);
+}
+
+.marvel-info li {
+  border-right: 4px solid #c41e3a;
+}
+
+.marvel-info li:hover {
+  background: rgba(196, 30, 58, 0.2);
+}

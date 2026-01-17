@@ -1,0 +1,435 @@
+/* ========================================
+   סגנונות ייחודיים לכרטיסי נארוטו
+   ======================================== */
+
+.naruto-card {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    width: 350px;
+    height: 490px;
+}
+
+/* רקעים */
+.naruto-orange {
+    background: linear-gradient(135deg, #ff9e00 0%, #ff6b00 50%, #e65100 100%);
+}
+
+.naruto-blue {
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 50%, #1565c0 100%);
+}
+
+.naruto-jutsu {
+    background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 50%, #4527a0 100%);
+}
+
+/* תבנית מגילה */
+.scroll-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* תוכן */
+.naruto-content {
+    position: relative;
+    z-index: 3;
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* כותרת */
+.naruto-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.chakra-cost {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #64b5f6, #2196f3);
+    border: 3px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(33, 150, 243, 0.5);
+}
+
+.chakra-cost.super {
+    background: linear-gradient(135deg, #ba68c8, #8e24aa);
+    animation: chakraPulse 2s ease-in-out infinite;
+}
+
+@keyframes chakraPulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(142, 36, 170, 0.5);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(142, 36, 170, 1);
+    }
+}
+
+.chakra-icon {
+    font-size: 1rem;
+}
+
+.cost-number {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.naruto-name {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+}
+
+.super-name {
+    background: linear-gradient(45deg, #fff, #64b5f6, #ba68c8);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: superShine 3s ease infinite;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.9));
+}
+
+@keyframes superShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.ninja-rank {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.genin { border-color: #ff9e00; }
+.chunin { border-color: #66bb6a; }
+.jonin { border-color: #42a5f5; }
+.kage { border-color: #ff6b6b; }
+
+/* אזור תמונה */
+.ninja-art {
+    position: relative;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    height: 240px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.super-art {
+    border-color: #ba68c8;
+    box-shadow: 0 0 20px rgba(186, 104, 200, 0.6);
+}
+
+.ninja-stats {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+}
+
+.super-stats {
+    animation: statsPulse 2s ease-in-out infinite;
+}
+
+.stat {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 2px solid #ff9e00;
+    display: flex;
+    gap: 5px;
+}
+
+.stat-label {
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.stat-value {
+    color: #ff9e00;
+    font-size: 0.85rem;
+    font-weight: 900;
+}
+
+.ninja-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    position: relative;
+}
+
+.sharingan-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.3;
+    animation: sharinganSpin 5s linear infinite;
+}
+
+@keyframes sharinganSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* מידע */
+.naruto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ninja-attributes {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.attribute-tag {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.jutsu-effect {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 10px;
+    border-right: 4px solid #ff9e00;
+}
+
+.super-effect {
+    background: linear-gradient(90deg, rgba(186, 104, 200, 0.2), rgba(142, 36, 170, 0.1));
+    border-right-color: #ba68c8;
+}
+
+.jutsu-effect h3 {
+    color: #ff9e00;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.super-effect h3 {
+    color: #ba68c8;
+}
+
+.jutsu-effect p {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.jutsu-effect strong {
+    color: #ffd54f;
+}
+
+.characteristics {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.char-tag {
+    background: rgba(255, 158, 0, 0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(255, 158, 0, 0.4);
+}
+
+/* תחתית */
+.naruto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.village-symbol,
+.jutsu-symbol {
+    font-size: 1.2rem;
+}
+
+.naruto-rare {
+    background: linear-gradient(135deg, #fff, #e0e0e0);
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.naruto-super {
+    background: linear-gradient(135deg, #ba68c8, #8e24aa);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    animation: superGlow 2s ease-in-out infinite;
+}
+
+@keyframes superGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(186, 104, 200, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(186, 104, 200, 1);
+    }
+}
+
+/* ג'וטסו */
+.jutsu-content {
+    padding: 20px 15px;
+}
+
+.jutsu-art {
+    height: 280px;
+    background: #000;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.jutsu-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.jutsu-type {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.type-badge {
+    background: rgba(126, 87, 194, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(126, 87, 194, 0.5);
+}
+
+.element-badge {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.requirements {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.requirements strong {
+    color: #ffd54f;
+}
+
+/* זוהרים */
+.naruto-glow {
+    box-shadow: 
+        0 0 25px rgba(255, 107, 0, 0.6),
+        inset 0 0 25px rgba(229, 81, 0, 0.3);
+}
+
+.naruto-glow-super {
+    box-shadow: 
+        0 0 35px rgba(186, 104, 200, 0.8),
+        inset 0 0 35px rgba(142, 36, 170, 0.4);
+    animation: superGlow2 3s ease-in-out infinite;
+}
+
+@keyframes superGlow2 {
+    0%, 100% {
+        box-shadow: 
+            0 0 35px rgba(186, 104, 200, 0.8),
+            inset 0 0 35px rgba(142, 36, 170, 0.4);
+    }
+    50% {
+        box-shadow: 
+            0 0 50px rgba(186, 104, 200, 1),
+            inset 0 0 50px rgba(142, 36, 170, 0.6);
+    }
+}
+
+.jutsu-glow {
+    box-shadow: 
+        0 0 25px rgba(126, 87, 194, 0.6),
+        inset 0 0 25px rgba(94, 53, 177, 0.3);
+}
+
+/* מידע */
+.naruto-info {
+    background: linear-gradient(135deg, rgba(255, 158, 0, 0.1), rgba(66, 165, 245, 0.1));
+    border: 2px solid rgba(255, 158, 0, 0.4);
+}
+
+.naruto-info li {
+    border-right: 4px solid #ff6b00;
+}
+
+.naruto-info li:hover {
+    background: rgba(255, 158, 0, 0.2);
+}
+

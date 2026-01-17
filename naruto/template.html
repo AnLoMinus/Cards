@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תבנית כרטיסי נארוטו</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="naruto-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">🍥 תבנית כרטיסי נארוטו (Naruto)</h1>
+
+        <div class="template-info naruto-info">
+            <h2>סוגי כרטיסים</h2>
+            <ul>
+                <li><strong>Ninja Card</strong> - כרטיס נינג'ה</li>
+                <li><strong>Jutsu Card</strong> - כרטיס ג'וטסו</li>
+                <li><strong>Mission Card</strong> - כרטיס משימה</li>
+                <li><strong>Client Card</strong> - כרטיס לקוח</li>
+                <li><strong>Super Rare</strong> - נדיר במיוחד</li>
+                <li><strong>Secret Rare</strong> - סוד נדיר</li>
+            </ul>
+        </div>
+
+        <div class="cards-grid">
+            <!-- כרטיס נינג'ה רגיל -->
+            <div class="card-wrapper">
+                <div class="card naruto-card" data-card-type="ninja">
+                    <div class="card-inner">
+                        <div class="card-background naruto-orange"></div>
+                        <div class="holographic-layer"></div>
+                        <div class="scroll-pattern"></div>
+
+                        <div class="card-content naruto-content">
+                            <div class="naruto-header">
+                                <div class="chakra-cost">
+                                    <span class="chakra-icon">🔷</span>
+                                    <span class="cost-number">3</span>
+                                </div>
+                                <h2 class="naruto-name">Naruto Uzumaki</h2>
+                                <div class="ninja-rank genin">
+                                    <span>Genin</span>
+                                </div>
+                            </div>
+
+                            <div class="ninja-art">
+                                <div class="ninja-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Combat:</span>
+                                        <span class="stat-value">3</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Support:</span>
+                                        <span class="stat-value">2</span>
+                                    </div>
+                                </div>
+                                <div class="ninja-image">
+                                    <p class="placeholder-text">תמונת הנינג'ה</p>
+                                </div>
+                            </div>
+
+                            <div class="naruto-info">
+                                <div class="ninja-attributes">
+                                    <span class="attribute-tag fire">🔥 Fire</span>
+                                    <span class="attribute-tag wind">💨 Wind</span>
+                                </div>
+
+                                <div class="jutsu-effect">
+                                    <h3><span class="effect-icon">⚡</span> Shadow Clone Jutsu</h3>
+                                    <p><strong>[Valid]</strong> כאשר נינג'ה זה נשלח לקרב, תוכל לשלוח נינג'ה נוסף עם
+                                        Combat 2 או פחות.</p>
+                                </div>
+
+                                <div class="characteristics">
+                                    <span class="char-tag">Jinchuriki</span>
+                                    <span class="char-tag">Male</span>
+                                    <span class="char-tag">Leaf Village</span>
+                                </div>
+                            </div>
+
+                            <div class="naruto-footer">
+                                <div class="card-number">N-001</div>
+                                <div class="village-symbol">🍃</div>
+                                <div class="rarity naruto-rare">R</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow naruto-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס Super Rare -->
+            <div class="card-wrapper">
+                <div class="card naruto-card" data-card-type="ninja" data-rarity="super">
+                    <div class="card-inner">
+                        <div class="card-background naruto-blue"></div>
+                        <div class="rainbow-layer"></div>
+                        <div class="sparkle-layer">
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </div>
+
+                        <div class="card-content naruto-content">
+                            <div class="naruto-header">
+                                <div class="chakra-cost super">
+                                    <span class="chakra-icon">🔷</span>
+                                    <span class="cost-number">6</span>
+                                </div>
+                                <h2 class="naruto-name super-name">Sasuke Uchiha</h2>
+                                <div class="ninja-rank jonin">
+                                    <span>Jonin</span>
+                                </div>
+                            </div>
+
+                            <div class="ninja-art super-art">
+                                <div class="ninja-stats super-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Combat:</span>
+                                        <span class="stat-value">7</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Support:</span>
+                                        <span class="stat-value">5</span>
+                                    </div>
+                                </div>
+                                <div class="ninja-image">
+                                    <div class="sharingan-overlay">👁️</div>
+                                    <p class="placeholder-text">תמונת הנינג'ה</p>
+                                </div>
+                            </div>
+
+                            <div class="naruto-info">
+                                <div class="ninja-attributes">
+                                    <span class="attribute-tag lightning">⚡ Lightning</span>
+                                    <span class="attribute-tag fire">🔥 Fire</span>
+                                </div>
+
+                                <div class="jutsu-effect super-effect">
+                                    <h3><span class="effect-icon">👁️</span> Sharingan</h3>
+                                    <p><strong>[Permanent]</strong> הנינג'ה הזה לא יכול להיפגע מג'וטסו של היריב.</p>
+                                    <p><strong>[Valid]</strong> פעם בתור, בטל ג'וטסו אחד של היריב.</p>
+                                </div>
+
+                                <div class="characteristics">
+                                    <span class="char-tag">Uchiha Clan</span>
+                                    <span class="char-tag">Sharingan</span>
+                                    <span class="char-tag">Male</span>
+                                </div>
+                            </div>
+
+                            <div class="naruto-footer">
+                                <div class="card-number">N-025</div>
+                                <div class="village-symbol">🍃</div>
+                                <div class="rarity naruto-super">SR</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow naruto-glow-super"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- כרטיס ג'וטסו -->
+            <div class="card-wrapper">
+                <div class="card naruto-card" data-card-type="jutsu">
+                    <div class="card-inner">
+                        <div class="card-background naruto-jutsu"></div>
+                        <div class="holographic-layer"></div>
+
+                        <div class="card-content naruto-content jutsu-content">
+                            <div class="naruto-header jutsu-header">
+                                <div class="chakra-cost">
+                                    <span class="chakra-icon">🔷</span>
+                                    <span class="cost-number">2</span>
+                                </div>
+                                <h2 class="naruto-name jutsu-name">Rasengan</h2>
+                            </div>
+
+                            <div class="jutsu-art">
+                                <div class="jutsu-image">
+                                    <p class="placeholder-text">תמונת הג'וטסו</p>
+                                </div>
+                            </div>
+
+                            <div class="naruto-info jutsu-info">
+                                <div class="jutsu-type">
+                                    <span class="type-badge">Ninjutsu</span>
+                                    <span class="element-badge wind">💨 Wind</span>
+                                </div>
+
+                                <div class="jutsu-effect">
+                                    <h3>אפקט הג'וטסו</h3>
+                                    <p><strong>Target:</strong> 1 נינג'ה של היריב</p>
+                                    <p><strong>Effect:</strong> גרום 3 נזק לנינג'ה היעד. אם הוא נהרס, שלוף קלף אחד.</p>
+                                </div>
+
+                                <div class="requirements">
+                                    <strong>Requirements:</strong> Naruto Uzumaki
+                                </div>
+                            </div>
+
+                            <div class="naruto-footer">
+                                <div class="card-number">J-012</div>
+                                <div class="jutsu-symbol">🌀</div>
+                                <div class="rarity naruto-rare">U</div>
+                            </div>
+                        </div>
+
+                        <div class="border-glow jutsu-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization-guide">
+            <h2>🎨 מדריך עיצוב כרטיסי נארוטו</h2>
+            <div class="guide-sections">
+                <div class="guide-section">
+                    <h3>דרגות נינג'ה</h3>
+                    <p>דרגות זמינות:</p>
+                    <pre>genin - גנין
+chunin - צ'ונין
+jonin - ג'ונין
+kage - קאגה</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>אלמנטים</h3>
+                    <p>אלמנטים:</p>
+                    <pre>🔥 Fire - אש
+💨 Wind - רוח
+💧 Water - מים
+⚡ Lightning - ברק
+🪨 Earth - אדמה</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>סוגי כרטיסים</h3>
+                    <p>שנה את <code>data-card-type</code>:</p>
+                    <pre>ninja - נינג'ה
+jutsu - ג'וטסו
+mission - משימה
+client - לקוח</pre>
+                </div>
+
+                <div class="guide-section">
+                    <h3>רמות נדירות</h3>
+                    <p>רמות:</p>
+                    <pre>C - Common
+U - Uncommon
+R - Rare
+SR - Super Rare
+UR - Ultra Rare</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- תפריט שכבות צף -->
+    <div class="layers-menu" id="layersMenu">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="toggle-icon">⚙️</span>
+            <span class="toggle-text">שכבות</span>
+        </div>
+
+        <div class="menu-content" id="menuContent">
+            <div class="menu-header">
+                <h3>🎨 בקרת שכבות</h3>
+                <button class="close-btn" id="closeMenu">✕</button>
+            </div>
+
+            <div class="menu-body">
+                <div class="layer-group">
+                    <h4>שכבות בסיסיות</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-background" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎨 רקע (Background)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-holographic" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">✨ הולוגרפיה (Holographic)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-crystal" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💎 קריסטל (Crystal)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-rainbow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌈 קשת (Rainbow)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>אפקטים</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-sparkles" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">⭐ ניצוצות (Sparkles)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-border-glow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">💫 זוהר מסגרת (Border Glow)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-3d" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🎭 אפקט 3D (3D Effect)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>תוכן</h4>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-content" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">📝 תוכן כרטיס (Content)</span>
+                    </div>
+
+                    <div class="layer-control">
+                        <label class="switch">
+                            <input type="checkbox" id="layer-text-shadow" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="layer-name">🌑 צללי טקסט (Text Shadows)</span>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>פעולות מהירות</h4>
+
+                    <div class="quick-actions">
+                        <button class="action-btn" id="enableAll">
+                            ✅ הפעל הכל
+                        </button>
+                        <button class="action-btn" id="disableAll">
+                            ❌ כבה הכל
+                        </button>
+                        <button class="action-btn" id="resetLayers">
+                            🔄 איפוס
+                        </button>
+                    </div>
+                </div>
+
+                <div class="layer-group">
+                    <h4>מצבי תצוגה</h4>
+
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="full">
+                            🌟 מלא
+                        </button>
+                        <button class="preset-btn" data-preset="minimal">
+                            📄 מינימלי
+                        </button>
+                        <button class="preset-btn" data-preset="effects-only">
+                            ✨ אפקטים בלבד
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="naruto-script.js"></script>
+</body>
+
+</html>
