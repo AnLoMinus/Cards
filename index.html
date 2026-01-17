@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnLoMinus Cards - מערכת תבניות כרטיסים מתקדמת</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* סגנונות ייחודיים לדף הבית */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: heroGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .templates-section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .template-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .template-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .template-card:hover::before {
+            opacity: 1;
+        }
+
+        .template-icon {
+            padding: 40px;
+            text-align: center;
+            font-size: 5rem;
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .template-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .template-card:hover .template-icon::after {
+            left: 100%;
+        }
+
+        .template-content {
+            padding: 30px;
+        }
+
+        .template-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .template-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .template-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .template-features li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .template-features li::before {
+            content: '✓';
+            color: #4ade80;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .template-link {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--color-1), var(--color-2));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .template-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        .template-link:hover::before {
+            left: 100%;
+        }
+
+        .template-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* צבעים לכל תבנית */
+        .pokemon-card {
+            --color-1: #ff6b6b;
+            --color-2: #4ecdc4;
+        }
+
+        .yugioh-card {
+            --color-1: #ffd700;
+            --color-2: #ff6b35;
+        }
+
+        .dragonball-card {
+            --color-1: #ff9500;
+            --color-2: #ff6b35;
+        }
+
+        .digimon-card {
+            --color-1: #52b788;
+            --color-2: #fee440;
+        }
+
+        .naruto-card {
+            --color-1: #ff9e00;
+            --color-2: #42a5f5;
+        }
+
+        .inuyasha-card {
+            --color-1: #dc143c;
+            --color-2: #9370db;
+        }
+
+        .finalfantasy-card {
+            --color-1: #8b5cf6;
+            --color-2: #ffd700;
+        }
+
+        .marvel-card {
+            --color-1: #c41e3a;
+            --color-2: #ffd700;
+        }
+
+        .sparks-card {
+            --color-1: #ffd700;
+            --color-2: #ff4444;
+        }
+
+        .torah-card {
+            --color-1: #4169e1;
+            --color-2: #ffd700;
+        }
+
+        .demo-card {
+            --color-1: #667eea;
+            --color-2: #764ba2;
+        }
+
+        .features-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">🎴 AnLoMinus Cards</h1>
+            <p class="hero-subtitle">מערכת תבניות כרטיסים מתקדמת עם אפקטים מדהימים</p>
+            <p class="hero-description">
+                פיתחנו מערכת מקצועית ליצירת כרטיסי משחק עם שכבות אפקטים מתקדמות,
+                השראה מתהליך ייצור כרטיסי פוקימון המקוריים. כל כרטיס כולל 7+ שכבות של אפקטים ויזואליים.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">חבילות זמינות</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">שכבות אפקטים</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">סוגי כרטיסים</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">אפקטים ייחודיים</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="templates-section">
+        <h2 class="section-title">🎮 חבילות תבניות זמינות</h2>
+        <p class="section-description">
+            בחר את החבילה המועדפת עליך והתחל ליצור כרטיסים מדהימים עם אפקטים מתקדמים
+        </p>
+
+        <div class="templates-grid">
+            <!-- דמו -->
+            <div class="template-card demo-card">
+                <div class="template-icon">⚡</div>
+                <div class="template-content">
+                    <h3 class="template-title">דמו - כרטיסי פוקימון</h3>
+                    <p class="template-description">
+                        דף דמונסטרציה עם 3 כרטיסי פוקימון לדוגמה המציגים את כל האפקטים
+                    </p>
+                    <ul class="template-features">
+                        <li>3 כרטיסים מוכנים</li>
+                        <li>כל סוגי האפקטים</li>
+                        <li>תפריט בקרת שכבות</li>
+                    </ul>
+                    <a href="index.html" class="template-link">צפה בדמו ▶</a>
+                </div>
+            </div>
+
+            <!-- פוקימון -->
+            <div class="template-card pokemon-card">
+                <div class="template-icon">🎮</div>
+                <div class="template-content">
+                    <h3 class="template-title">Pokémon</h3>
+                    <p class="template-description">
+                        תבניות מקצועיות לכרטיסי פוקימון עם אפקטים הולוגרפיים מתקדמים
+                    </p>
+                    <ul class="template-features">
+                        <li>Holographic & Rainbow Rare</li>
+                        <li>Full Art & VMAX</li>
+                        <li>9 סוגי אנרגיה</li>
+                        <li>אפקטי Crystal & Gold</li>
+                    </ul>
+                    <a href="pokemon/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- יוגיהו -->
+            <div class="template-card yugioh-card">
+                <div class="template-icon">🎴</div>
+                <div class="template-content">
+                    <h3 class="template-title">Yu-Gi-Oh!</h3>
+                    <p class="template-description">
+                        תבניות לכל סוגי כרטיסי יוגיהו כולל מפלצות, כישופים ומלכודות
+                    </p>
+                    <ul class="template-features">
+                        <li>8 סוגי מפלצות</li>
+                        <li>Spell & Trap Cards</li>
+                        <li>XYZ & Synchro</li>
+                        <li>6 רמות נדירות</li>
+                    </ul>
+                    <a href="yugioh/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- דרגון בול -->
+            <div class="template-card dragonball-card">
+                <div class="template-icon">🐉</div>
+                <div class="template-content">
+                    <h3 class="template-title">Dragon Ball</h3>
+                    <p class="template-description">
+                        כרטיסי דרגון בול עם אפקטי אאורה ואנרגיה מיוחדים
+                    </p>
+                    <ul class="template-features">
+                        <li>Character & Battle Cards</li>
+                        <li>Leader Cards</li>
+                        <li>5 צבעים</li>
+                        <li>אפקטי אאורה דינמיים</li>
+                    </ul>
+                    <a href="dragonball/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- דיגימון -->
+            <div class="template-card digimon-card">
+                <div class="template-icon">🦖</div>
+                <div class="template-content">
+                    <h3 class="template-title">Digimon</h3>
+                    <p class="template-description">
+                        כרטיסי דיגימון עם מערכת התפתחות ורמות
+                    </p>
+                    <ul class="template-features">
+                        <li>4 רמות התפתחות</li>
+                        <li>Tamer & Option Cards</li>
+                        <li>מערכת DP</li>
+                        <li>אפקטים ייחודיים</li>
+                    </ul>
+                    <a href="digimon/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- נארוטו -->
+            <div class="template-card naruto-card">
+                <div class="template-icon">🍥</div>
+                <div class="template-content">
+                    <h3 class="template-title">Naruto</h3>
+                    <p class="template-description">
+                        כרטיסי נינג'ה עם מערכת צ'אקרה וג'וטסו
+                    </p>
+                    <ul class="template-features">
+                        <li>Ninja & Jutsu Cards</li>
+                        <li>4 דרגות נינג'ה</li>
+                        <li>5 אלמנטים</li>
+                        <li>אפקטי שרינגן</li>
+                    </ul>
+                    <a href="naruto/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- אינויאשה -->
+            <div class="template-card inuyasha-card">
+                <div class="template-icon">🗡️</div>
+                <div class="template-content">
+                    <h3 class="template-title">Inuyasha</h3>
+                    <p class="template-description">
+                        כרטיסי דמויות ושדים עם שברי אבן החן המקודשת
+                    </p>
+                    <ul class="template-features">
+                        <li>Character & Demon Cards</li>
+                        <li>Jewel Shards</li>
+                        <li>Spell Cards</li>
+                        <li>אפקטי זוהר מיוחדים</li>
+                    </ul>
+                    <a href="inuyasha/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- Final Fantasy -->
+            <div class="template-card finalfantasy-card">
+                <div class="template-icon">🎮</div>
+                <div class="template-content">
+                    <h3 class="template-title">Final Fantasy TCG</h3>
+                    <p class="template-description">
+                        כרטיסי דמויות אגדיות מכל משחקי Final Fantasy עם זימונים וכישופים
+                    </p>
+                    <ul class="template-features">
+                        <li>Forward, Backup, Summon</li>
+                        <li>8 אלמנטים</li>
+                        <li>דמויות מ-FF I-XV</li>
+                        <li>אפקטי קריסטל</li>
+                    </ul>
+                    <a href="finalfantasy/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- Marvel -->
+            <div class="template-card marvel-card">
+                <div class="template-icon">🦸‍♂️</div>
+                <div class="template-content">
+                    <h3 class="template-title">Marvel</h3>
+                    <p class="template-description">
+                        גיבורי העל, נבלים ואבני האינסוף מעולם ה-MCU והקומיקס
+                    </p>
+                    <ul class="template-features">
+                        <li>Heroes & Villains</li>
+                        <li>6 Infinity Stones</li>
+                        <li>Avengers, X-Men & more</li>
+                        <li>אפקטים קוסמיים</li>
+                    </ul>
+                    <a href="marvel/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- Sparks War -->
+            <div class="template-card sparks-card">
+                <div class="template-icon">⚔️✨</div>
+                <div class="template-content">
+                    <h3 class="template-title">מלחמת הניצוצות</h3>
+                    <p class="template-description">
+                        כלי אור וחושך, 4 חילות רוחניים, 21 כלים קדושים ומסוכנים
+                    </p>
+                    <ul class="template-features">
+                        <li>13 כלי אור קדושים</li>
+                        <li>8 כלי חושך (הגנה)</li>
+                        <li>4 חילות מיוחדים</li>
+                        <li>אפקטים רוחניים</li>
+                    </ul>
+                    <a href="sparks-war/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+
+            <!-- Torah Portions -->
+            <div class="template-card torah-card">
+                <div class="template-icon">📖✡️</div>
+                <div class="template-content">
+                    <h3 class="template-title">פרשות השבוע</h3>
+                    <p class="template-description">
+                        54 פרשות התורה מחולקות ל-5 חומשים עם ערכים ונושאים
+                    </p>
+                    <ul class="template-features">
+                        <li>5 חומשי תורה</li>
+                        <li>54 פרשות שבוע</li>
+                        <li>ערכים ונושאים</li>
+                        <li>אותיות עבריות מרחפות</li>
+                    </ul>
+                    <a href="torah-portions/template.html" class="template-link">פתח תבנית ▶</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">✨ תכונות מתקדמות</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3 class="feature-title">תפריט בקרת שכבות</h3>
+                <p class="feature-description">
+                    תפריט צף מתקדם להדלקה וכיבוי של כל שכבה בנפרד. מושלם לפיתוח ובדיקת אפקטים.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">7+ שכבות אפקטים</h3>
+                <p class="feature-description">
+                    כל כרטיס מורכב משכבות מרובות: רקע, הולוגרפיה, קריסטל, קשת, ניצוצות, תוכן וזוהר.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <h3 class="feature-title">אפקטי 3D</h3>
+                <p class="feature-description">
+                    סיבוב תלת מימדי דינמי שמגיב לתנועת העכבר עם perspective מתקדם.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3 class="feature-title">אנימציות מתקדמות</h3>
+                <p class="feature-description">
+                    ניצוצות נוצצים, זוהרים דינמיים ואפקטי קליק אינטראקטיביים.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">תיעוד מלא</h3>
+                <p class="feature-description">
+                    README מפורט עם מדריכים, דוגמאות קוד ופתרונות לבעיות נפוצות.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3 class="feature-title">התאמה אישית</h3>
+                <p class="feature-description">
+                    קל לשנות צבעים, להוסיף אפקטים חדשים וליצור סוגי כרטיסים משלך.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="README.md" class="footer-link">📖 תיעוד</a>
+            <a href="index.html" class="footer-link">⚡ דמו</a>
+            <a href="#" class="footer-link">💡 מדריכים</a>
+        </div>
+        <p>נוצר עם ❤️ למפתחים ולאוהבי כרטיסי משחק</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">
+            גרסה 1.0.0 | עדכון אחרון: אוקטובר 2025
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
